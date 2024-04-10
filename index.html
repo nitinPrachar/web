@@ -241,25 +241,29 @@
             <div class="list-services" id="list-services">
               <div class="row">
                 <div class="col-lg-4">
-                  <div class="d-print transition">
+                  <div class="d-print transition mt-0">
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.f5405a1f.jpg&w=384&q=75" class="img-fluid" alt="">
                   </div>
-                  <div class="d-media transition">
+                  <div class="d-media transition mt-1">
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
                   </div>
-                  <div class="d-digital transition">
+                  <div class="d-digital transition mt-2" >
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F8.7b1a6d83.png&w=384&q=75" alt="">
                   </div>
-                  <div class="d-celebrity transition">
+                  <div class="d-celebrity transition mt-3">
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F6.4e7b538b.png&w=384&q=75" alt="">
                   </div>
-                  <div class="d-adfilm transition tr-100">
+                  <div class="d-adfilm transition tr-100 mt-4">
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.fce67014.png&w=384&q=75" alt="">
                   </div>
-                  <div class="d-sports transition tr-100">
+                  <div class="d-sports transition tr-100 mt-5">
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.37277019.png&w=384&q=75" alt="">
                   </div>
-                  <div class="d-creative transition tr-100">
+
+                  <div class="d-print transition tr-100 mt-6">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.37277019.png&w=384&q=75" alt="">
+                  </div>
+                  <div class="d-creative transition tr-100 mt-7">
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
                   </div>
                 </div>
@@ -1083,50 +1087,73 @@
       $(document).ready(function() {
         $('#digital').mouseenter(function() {
           $('.d-digital').css("display", "block");
+          $('.services').css("background","#303952")
         })
         $('#digital').mouseleave(function() {
           $('.d-digital').css("display", "none");
+          $('.services').css("background"," #1C1C1C")
+
         })
 
         $('#print').mouseenter(function() {
           $('.d-print').css("display", "block");
+          $('.services').css("background","#182C61")
         })
         $('#print').mouseleave(function() {
           $('.d-print').css("display", "none");
+          $('.services').css("background","#1C1C1C")
         })
 
         $('#media').mouseenter(function() {
           $('.d-media').css("display", "block");
+          $('.services').css("background","#0a3d62")
         })
         $('#media').mouseleave(function() {
           $('.d-media').css("display", "none");
+          $('.services').css("background","#1C1C1C")
         })
 
         $('#sports-marketing').mouseenter(function() {
           $('.d-sports').css("display", "block");
+          $('.services').css("background","#303952")
+
         })
         $('#sports-marketing').mouseleave(function() {
           $('.d-sports').css("display", "none");
+          $('.services').css("background","#1C1C1C")
+
         })
 
         $('#celebrity-endors').mouseenter(function() {
           $('.d-sports').css("display", "block");
+          $('.services').css("background","#413672")
+
         })
         $('#celebrity-endors').mouseleave(function() {
           $('.d-sports').css("display", "none");
+          $('.services').css("background","#1C1C1C")
+
         })
 
         $('#ad-film').mouseenter(function() {
           $('.d-adfilm').css("display", "block");
+          $('.services').css("background","#1C1C1C")
+
         })
         $('#ad-film').mouseleave(function() {
           $('.d-adfilm').css("display", "none");
+          $('.services').css("background","#1C1C1C")
+
         })
         $('#creative').mouseenter(function() {
           $('.d-creative').css("display", "block");
+          $('.services').css("background","#0a3d62")
+
         })
         $('#creative').mouseleave(function() {
           $('.d-creative').css("display", "none");
+          $('.services').css("background","#1C1C1C")
+
         })
       })
     </script>
