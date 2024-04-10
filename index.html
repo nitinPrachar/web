@@ -1,1351 +1,1134 @@
-:root {
-  --primary-color: #0d3b66;
-  --secondary-color: #faf0ca;
-  --accent-color: #f4815e;
-}
-.main{
-width: 100%;
-height: 100vh;
-
-}
-*{
-  font-family: "Cabin", sans-serif !important;
-}
-a{
-  text-decoration: none;
-}
-li{
-list-style-type: none;
-}
-
-/* header menu start */
-.container-fluid {
-padding:  0px;
-overflow-x: hidden;
-
-}
-
-/* cusror animation */
-
-.pos-rel{
-position: relative;
-
-}
-.cursor {
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-}
-
-.default-cursor {
-  width: 10px;
-  height: 10px;
-  background-color: var(--accent-color);
-
-  z-index: 9999;
-  color: var(--primary-color);
-}
-
-.cursor-follower {
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 999;
-  height: 100vh;
-}
-
-.default-cursor-follower {
-  width: 50px;
-  height: 50px;
-  background-color: var(--accent-color);
-  opacity: 0.2;
-
-}
-
-
-header{
-  height: 80px;
-  padding: 10px;
-  /* position: fixed;
-  top:0;
-  left: 0;
-  width: 100%;
-  z-index: 99; */
-  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-}
-header .container-fluid {
-padding: 0 40px;
-overflow-x: hidden;
-}
-header .logo{
-width: 80%;
-}
-header .nav-links ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  height: 60px;
-  padding: 0;
-}
-header .nav-links ul li{
-padding: 0 30px;
-list-style: none;
-}
-header .nav-links ul li a {
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  color: #333;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-
-.get-quote{
-display: flex;
-justify-content: end;
-align-items: center;
-height: 60px;
-gap: 10px;
-}
-
-.get-quote a{
-color: #333;
-letter-spacing: 1px;
-font-weight: 600;
-font-size: 18px;
-}
-.get-quote .icon{
-  border: 1px solid #333;
-  width: 20pxc;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  vertical-align: middle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.icon svg{
-width: 16px;
-height: 16px;
-}
-
-.quote-form{
-  /* background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red); */
-  background-image: linear-gradient(to bottom, #ff3833, #f8452a, #f14f21, #e95817, #e1600d);
-  margin-right: 32px;
-  margin-left: 18px;
-  padding: 10px 30px;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 6px;
-}
-
-.quote-form span{
-  color: #fff;
-    font-size: 15px;
-    font-weight: 400;
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Prachar Communications</title>
+  </head>
+  <body>
+    <div id="main">
+      <!-- cursor animation end -->
+      <header>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="logo">
+                <img src="images/Prachar-Logo.png" alt="Prachar Communications Logo" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="nav-links">
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="#">About Us</a>
+                    </li>
+                    <li>
+                      <a href="#">Services</a>
+                    </li>
+                    <li>
+                      <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                      <a href="#">Career</a>
+                    </li>
+                    <li>
+                      <a href="#">Clients</a>
+                    </li> 
+                    <li>
+                      <a href="#">Blogs</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact us</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="get-quote">
+                <div class="quote-number">
+                  <a href="tel:02242111300">022-421-11-300 </a>
+                </div>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                  </svg>
+                </div>
+                <div class="quote-form">
+                  <a href="#">
+                    <span>Get Quote </span>
+                  </a>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- hero section start -->
+      <div class="hero-slideshow">
+        <div class="hero-slider hero-style">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="https://images.unsplash.com/photo-1538329972958-465d6d2144ed?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MDE1NTkzNg&ixlib=rb-1.2.1&q=85">
+                  <div class="container">
+                    <div data-swiper-parallax="300" class="slide-title">
+                      <h2>Ad Film Production</h2>
+                    </div>
+                    <!-- <div data-swiper-parallax="400" class="slide-text"><p>Want to see your kid become more expressive?</p></div> -->
+                    <!-- <div class="clearfix"></div><div data-swiper-parallax="500" class="slide-btns"><a href="#" class="theme-btn-s2">Register now</a><a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i>Get Info</a></div>  -->
+                  </div>
+                </div>
+                <!-- end slide-inner -->
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="https://images.unsplash.com/photo-1633596683562-4a47eb4983c5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                  <div class="container">
+                    <div data-swiper-parallax="300" class="slide-title">
+                      <h2>Design</h2>
+                    </div>
+                    <!-- <div data-swiper-parallax="400" class="slide-text"><p>Want to see your kid become more expressive?</p></div> -->
+                    <!-- <div class="clearfix"></div><div data-swiper-parallax="500" class="slide-btns"><a href="#" class="theme-btn-s2">Register now</a><a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a></div> -->
+                  </div>
+                </div>
+                <!-- end slide-inner -->
+              </div>
+              <!-- end slide -->
+              <div class="swiper-slide">
+                <div class="slide-inner slide-bg-image" data-background="https://images.unsplash.com/photo-1622737133809-d95047b9e673?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                  <div class="container">
+                    <div data-swiper-parallax="300" class="slide-title">
+                      <h2>Creative</h2>
+                    </div>
+                    <!-- <div data-swiper-parallax="400" class="slide-text"><p>Want to see your kid become more expressive?</p></div> -->
+                    <!-- <div class="clearfix"></div><div data-swiper-parallax="500" class="slide-btns"><a href="#" class="theme-btn-s2">Register now</a><a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a></div> -->
+                  </div>
+                </div>
+                <!-- end slide-inner -->
+              </div>
+              <!-- end swiper-slide -->
+              <!-- end swiper-slide -->
+            </div>
+            <!-- end swiper-wrapper -->
+            <!-- swipper controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="cm-sub-heading">
+          <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+              <p>
+                <span style="color: red;">"</span>Prachar Communications Group Is A Complete Digital Marketing And Advertising Agency <span>
+                  <img src="https://gilli.wpengine.com/wp-content/uploads/2023/09/heading-image-1.webp" class="img-fluid image-in-span">
+                </span> We Delivere Creative And Digital Solutions With Our Skilled Team Of Industry Professionals Who Are Fully Dedicated To Client Successful Footpath <span>
+                  <img src="https://gilli.wpengine.com/wp-content/uploads/2023/09/heading-image-2.webp" class="image-in-span img-fluid">
+                </span> And Growth. <span style="color: red;">"</span>
+              </p>
+            </div>
+            <div class="about-proposals">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="pr-box">
+                      <div class="pr-icons nk-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                          <path d="M96,80l-6.37-11v-38l-32.93-19L50.45,1.07,44.21,11.88l-32.92,19v38L4.91,80h13L50.46,98.74,82.57,80.2,82.42,80Zm-2.73-1.58h-42V71H80.51L65.81,45.54l6.38-3.68ZM88,66.18,73.55,41.07,88,32.71Zm-.78-34.84L72.77,39.7,58.27,14.6ZM45.36,13l.43-.24-.14-.25,4.8-8.32L71.39,40.5,65,44.18,50.45,18.94,35.88,44.18,29.5,40.5ZM42.63,14.6,28.14,39.7,13.65,31.34ZM12.86,32.71l14.49,8.36L12.86,66.18ZM49.67,96.46,21.06,80H49.67Zm0-18.09h-42L28.72,41.86l6.38,3.68L20.4,71H49.67Zm.69-25.76a2.49,2.49,0,0,0-.69,4.88V69.42H23.13L50.45,22.11,77.78,69.42H51.24v-12a2.49,2.49,0,0,0-.88-4.82Zm.88,43.85V80H79.85Z"></path>
+                        </svg>
+                      </div>
+                      <div class="pr-count nk-10">
+                        <span>150 +</span>
+                      </div>
+                      <div class="pr-name nk-10">
+                        <h3>Satisfied Clients </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="pr-box">
+                      <div class="pr-icons nk-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                          <path d="M99,51,72.27,13.17h0v0h0A27.68,27.68,0,1,0,30.66,49.44H1L26.86,86.16l.09,0A27.68,27.68,0,1,0,69.36,51ZM4.07,51H30.66A27.6,27.6,0,0,0,22.33,70.8a27.07,27.07,0,0,0,1.11,7.74ZM49.22,96.88a26.08,26.08,0,0,1-16.5-45.61,27.6,27.6,0,0,0,16.5,6.06Zm0-41.13A25.88,25.88,0,0,1,35,51H49.22Zm0-6.31H35a25.9,25.9,0,0,1,14.19-4.73Zm0-6.31a27.59,27.59,0,0,0-16.5,6.07,26,26,0,0,1-8.81-19.53h0A26.12,26.12,0,0,1,49.22,3.58ZM96,49.44H69.36a27.61,27.61,0,0,0,7.28-27.35ZM50.8,3.58A26.07,26.07,0,0,1,67.3,49.19a27.6,27.6,0,0,0-16.5-6.06Zm0,41.13A25.94,25.94,0,0,1,65,49.44H50.8Zm0,6.31H65a26,26,0,0,1-14.2,4.73ZM76.12,70.79h0A26.13,26.13,0,0,1,50.8,96.88V57.32a27.49,27.49,0,0,0,16.5-6.06A26,26,0,0,1,76.12,70.79Z"></path>
+                        </svg>
+                      </div>
+                      <div class="pr-count nk-10">
+                        <span>2000 +</span>
+                      </div>
+                      <div class="pr-name nk-10">
+                        <h3>Strategies Planed</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="pr-box">
+                      <div class="pr-icons nk-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                          <path d="M86.17,70.1,69.74,91.22H42L74,50.13l.34-.43L50.22,8l-49,84.84h98ZM51,41.88a8.35,8.35,0,0,1,0,16.63Zm0,18.26a10,10,0,0,0,0-19.87V12.64L72.36,49.57,51,76.94Zm-1.63-1.63a8.35,8.35,0,0,1,0-16.63ZM4,91.22,49.41,12.64V40.27a10,10,0,0,0,0,19.87V79L39.9,91.22ZM86,73,96.41,91.22H71.79Z"></path>
+                        </svg>
+                      </div>
+                      <div class="pr-count nk-10">
+                        <span>1500 +</span>
+                      </div>
+                      <div class="pr-name nk-10">
+                        <h3>Projects Released</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="pr-box">
+                      <div class="pr-icons nk-10">
+                        <span>
+                          <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                              <path d="M72.09,60.36,88.4,32.1H50.92V1.32H49.24V32.1H11.77L28.08,60.36H7.16v1.69H29.05L49.36,97.22h-11v1.67H61.86V97.22h-11L71.12,62.05H93V60.36ZM14.67,33.77H49.24V60.36H30ZM50.08,95.12,31,62.05H69.18ZM70.15,60.36H50.92V33.77H85.49Z"></path>
+                            </svg>
+                          </i>
+                        </span>
+                      </div>
+                      <div class="pr-count nk-10">
+                        <span>500K</span>
+                      </div>
+                      <div class="pr-name nk-10">
+                        <h3>Satisfied Clients</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services">
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-8">
+                <div class="services-heading">
+                  <div class="h-left">
+                    <h6 class="sub-heading"> Services </h6>
+                    <h2>Superior Design and <br>Concept based work </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 ">
+                <div class="cm-btn">
+                  <a href="#">
+                    <span>View <br>Services</span>
+                  </a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="pos-rel">
+            <div class="list-services" id="list-services">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="d-print transition">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.f5405a1f.jpg&w=384&q=75" class="img-fluid" alt="">
+                  </div>
+                  <div class="d-media transition">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
+                  </div>
+                  <div class="d-digital transition">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F8.7b1a6d83.png&w=384&q=75" alt="">
+                  </div>
+                  <div class="d-celebrity transition">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F6.4e7b538b.png&w=384&q=75" alt="">
+                  </div>
+                  <div class="d-adfilm transition tr-100">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.fce67014.png&w=384&q=75" alt="">
+                  </div>
+                  <div class="d-sports transition tr-100">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.37277019.png&w=384&q=75" alt="">
+                  </div>
+                  <div class="d-creative transition tr-100">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="services-list-col" id="print">
+                    <div class="services-no">
+                      <span>01</span>
+                    </div>
+                    <div class="services-title">
+                      <h2>Print</h2>
+                    </div>
+                    <div class="servicves-desc">
+                      <p>Welcome to our leading social media marketing company in mumbai</p>
+                    </div>
+                    <div class="arrow">
+                      <img src="images/right-arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="services-list-col" id="media">
+                    <div class="services-no">
+                      <span>02</span>
+                    </div>
+                    <div class="services-title">
+                      <h2>Media</h2>
+                    </div>
+                    <div class="servicves-desc">
+                      <p>Welcome to our leading social media marketing company in mumbai</p>
+                    </div>
+                    <div class="arrow">
+                      <img src="images/right-arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="services-list-col" id="digital"> 
+                    <div class="services-no">
+                      <span>03</span>
+                    </div>
+                    <div class="services-title">
+                      <h2>Digital</h2>
+                    </div>
+                    <div class="servicves-desc">
+                      <p>Welcome to our leading social media marketing company in mumbai</p>
+                    </div>
+                    <div class="arrow">
+                      <img src="images/right-arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="services-list-col" id="celebrity-endors">
+                    <div class="services-no">
+                      <span>04</span>
+                    </div>
+                    <div class="services-title">
+                      <h2>Celebrity Endorsements</h2>
+                    </div>
+                    <div class="servicves-desc">
+                      <p>Welcome to our leading social media marketing company in mumbai</p>
+                    </div>
+                    <div class="arrow">
+                      <img src="images/right-arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="services-list-col" id="sports-marketing">
+                    <div class="services-no">
+                      <span>05</span>
+                    </div>
+                    <div class="services-title">
+                      <h2>Ad Film Productions</h2>
+                    </div>
+                    <div class="servicves-desc">
+                      <p>Welcome to our leading social media marketing company in mumbai</p>
+                    </div>
+                    <div class="arrow">
+                      <img src="images/right-arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="services-list-col" id="ad-film">
+                    <div class="services-no">
+                      <span>06</span>
+                    </div>
+                    <div class="services-title">
+                      <h2>Sports Marketing</h2>
+                    </div>
+                    <div class="servicves-desc">
+                      <p>Welcome to our leading social media marketing company in mumbai</p>
+                    </div>
+                    <div class="arrow">
+                      <img src="images/right-arrow.png" alt="">
+                    </div>
+                  </div>
+                  <div class="services-list-col" id="creative">
+                    <div class="services-no">
+                      <span>07</span>
+                    </div>
+                    <div class="services-title">
+                      <h2>Creative</h2>
+                    </div>
+                    <div class="servicves-desc">
+                      <p>Welcome to our leading social media marketing company in mumbai</p>
+                    </div>
+                    <div class="arrow">
+                      <img src="images/right-arrow.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="services-heading">
+                <div class="h-left">
+                  <h6 class="sub-heading"> Portfolio </h6>
+                  <h2>Most Significant Trending <br>Business Models </h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 ">
+              <div class="cm-btn">
+                <a href="#">
+                  <span>View <br>Services</span>
+                </a>
+                </div>
+            </div>
+        </div>
+         
+          <div class="workbox">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="work-showcase">
+                  <div class="work-screenshot">
+                    <img src="https://gilli.wpengine.com/wp-content/uploads/2023/08/portfolio-5.jpg" alt="web" title="web" class="img-fluid" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                  </div>
+                  <div class="work-description">
+                    <div class="work-titile">
+                      <h3>Print</h3>
+                    </div>
+                    <div class="work-include">
+                      <span>Logo, user interface</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="work-showcase ws-2">
+                  <div class="work-screenshot">
+                    <img src="https://gilli.wpengine.com/wp-content/uploads/2023/08/portfolio-4.jpg" alt="web" title="web" class="img-fluid" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                  </div>
+                  <div class="work-description">
+                    <div class="work-titile">
+                      <h3>Media</h3>
+                    </div>
+                    <div class="work-include">
+                      <span>Logo, user interface</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="work-showcase ws-3">
+                  <div class="work-screenshot">
+                    <img src="https://gilli.wpengine.com/wp-content/uploads/2023/08/portfolio-3.jpg" alt="web" title="web" class="img-fluid" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                  </div>
+                  <div class="work-description">
+                    <div class="work-titile">
+                      <h3>Print</h3>
+                    </div>
+                    <div class="work-include">
+                      <span>Logo, user interface</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="work-showcase ws-4">
+                  <div class="work-showcase ">
+                    <div class="work-screenshot">
+                      <img src="https://gilli.wpengine.com/wp-content/uploads/2023/08/portfolio-2.jpg" alt="web" title="web" class="img-fluid" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                    </div>
+                    <div class="work-description">
+                      <div class="work-titile">
+                        <h3>Media</h3>
+                      </div>
+                      <div class="work-include">
+                        <span>Logo, user interface</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="latest-blogs">
+        <div class="container">
+          <div class="h-left">
+            <h6 class="sub-heading"> Services </h6>
+            <h2>Articles & Blogs </h2>
+          </div>
+          <div class="blog-list">
+            <div class="row">
+              <!-- <div class="col-lg-4"><div class="blog-bx"><div class="blog-image"><img src="https://gilli.wpengine.com/wp-content/uploads/2023/10/blog-1.jpg" alt=""><div class="rd-btn"><a href="#"><span><svg
+																																					xmlns="http://www.w3.org/2000/svg"
+																																					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><path d="M7.4,99c-1.6,0-3.3-0.6-4.5-1.9c-2.5-2.5-2.5-6.6,0-9.1L88,2.9c2.5-2.5,6.6-2.5,9.1,0c2.5,2.5,2.5,6.6,0,9.1					L12,97.1C10.7,98.4,9.1,99,7.4,99z"></path><path d="M92.5,82.4c-3.5,0-6.4-2.9-6.4-6.4V13.9H24c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4h68.5					c3.5,0,6.4,2.9,6.4,6.4V76C98.9,79.5,96,82.4,92.5,82.4L92.5,82.4z"></path></svg></span></a></div></div><div class="blog-info"><h2> 
+                  How to Find the Perfect Agency Partnership</h2></div></div></div> -->
+              <div class="col-lg-6">
+                <div class="blog-bx">
+                  <div class="blog-image">
+                    <img src="https://gilli.wpengine.com/wp-content/uploads/2023/10/blog-1.jpg" alt="">
+                    <div class="rd-btn">
+                      <a href="#">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <path d="M7.4,99c-1.6,0-3.3-0.6-4.5-1.9c-2.5-2.5-2.5-6.6,0-9.1L88,2.9c2.5-2.5,6.6-2.5,9.1,0c2.5,2.5,2.5,6.6,0,9.1					L12,97.1C10.7,98.4,9.1,99,7.4,99z"></path>
+                            <path d="M92.5,82.4c-3.5,0-6.4-2.9-6.4-6.4V13.9H24c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4h68.5					c3.5,0,6.4,2.9,6.4,6.4V76C98.9,79.5,96,82.4,92.5,82.4L92.5,82.4z"></path>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="blog-info">
+                    <h2> Unleash Creativity and Captivate Your Audience</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="blog-bx">
+                  <div class="blog-image">
+                    <img src="https://gilli.wpengine.com/wp-content/uploads/2023/10/blog-3.jpg" alt="">
+                    <div class="rd-btn">
+                      <a href="#">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <path d="M7.4,99c-1.6,0-3.3-0.6-4.5-1.9c-2.5-2.5-2.5-6.6,0-9.1L88,2.9c2.5-2.5,6.6-2.5,9.1,0c2.5,2.5,2.5,6.6,0,9.1					L12,97.1C10.7,98.4,9.1,99,7.4,99z"></path>
+                            <path d="M92.5,82.4c-3.5,0-6.4-2.9-6.4-6.4V13.9H24c-3.5,0-6.4-2.9-6.4-6.4c0-3.5,2.9-6.4,6.4-6.4h68.5					c3.5,0,6.4,2.9,6.4,6.4V76C98.9,79.5,96,82.4,92.5,82.4L92.5,82.4z"></path>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="blog-info">
+                    <h2> How to Find the Perfect Agency Partnership</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="container">
+          <div class="head-center">
+            <h2>Client Say's</h2>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-bx">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="user-info">
+                        <div class="user-img">
+                          <img src="https://gilli.wpengine.com/wp-content/uploads/2023/10/home-1-testimonial-carousel-1.jpg" alt="">
+                        </div>
+                        <div class="colon-svg">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <path d="M1,61c0-19.8,10.8-37.5,27.2-48.9l14.5,11.6c-8.5,4.5-18.2,15.6-20.6,25.1c0.8-0.5,3.2-0.8,5.3-0.8c10,0,18,7.7,18,19 s-9.5,20.9-20.9,20.9C12.1,87.9,1,78.1,1,61z"></path>
+                            <path d="M54.9,61c0-19.8,10.6-37.5,26.9-48.9l14.8,11.6C88.2,28.2,78.1,39.3,76,48.8c0.8-0.5,3.2-0.8,5.3-0.8C91.1,48,99,55.7,99,67 s-9.2,20.9-20.9,20.9C65.7,87.9,54.9,78.1,54.9,61z"></path>
+                          </svg>
+                        </div>
+                        <div class="nt-10">
+                          <div class="user-name">
+                            <h2>Nilesh Gupta</h2>
+                          </div>
+                          <div class="user-desgn">
+                            <h5> MD Vijay Sales</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="user-info-desc">
+                        <p>Prachar is truly at the top with their enormous power of negotiations in the market, the services provided by them has been a pillar to our association with them. They live true to their promise of delivering exceptional offers as compared to any other player in the market.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-bx">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="user-info">
+                        <div class="user-img">
+                          <img src="https://gilli.wpengine.com/wp-content/uploads/2023/10/home-1-testimonial-carousel-4.jpg" alt="">
+                        </div>
+                        <div class="colon-svg">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <path d="M1,61c0-19.8,10.8-37.5,27.2-48.9l14.5,11.6c-8.5,4.5-18.2,15.6-20.6,25.1c0.8-0.5,3.2-0.8,5.3-0.8c10,0,18,7.7,18,19 s-9.5,20.9-20.9,20.9C12.1,87.9,1,78.1,1,61z"></path>
+                            <path d="M54.9,61c0-19.8,10.6-37.5,26.9-48.9l14.8,11.6C88.2,28.2,78.1,39.3,76,48.8c0.8-0.5,3.2-0.8,5.3-0.8C91.1,48,99,55.7,99,67 s-9.2,20.9-20.9,20.9C65.7,87.9,54.9,78.1,54.9,61z"></path>
+                          </svg>
+                        </div>
+                        <div class="nt-10">
+                          <div class="user-name">
+                            <h2>Anuj Arora</h2>
+                          </div>
+                          <div class="user-desgn">
+                            <h5> Marketing Head -Symphony</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="user-info-desc">
+                        <p>Prachar is the name I associate with speed, business understanding and ROI. From a small project to full-fledged fledged 360 campaign, they give their full attention and might into everything. I would sum up my experience as media houses fear the client's delight. They deliver what the client needs. Wishing them best for future growth</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-bx">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="user-info">
+                        <div class="user-img">
+                          <img src="https://gilli.wpengine.com/wp-content/uploads/2023/10/home-1-testimonial-carousel-1.jpg" alt="">
+                        </div>
+                        <div class="colon-svg">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <path d="M1,61c0-19.8,10.8-37.5,27.2-48.9l14.5,11.6c-8.5,4.5-18.2,15.6-20.6,25.1c0.8-0.5,3.2-0.8,5.3-0.8c10,0,18,7.7,18,19 s-9.5,20.9-20.9,20.9C12.1,87.9,1,78.1,1,61z"></path>
+                            <path d="M54.9,61c0-19.8,10.6-37.5,26.9-48.9l14.8,11.6C88.2,28.2,78.1,39.3,76,48.8c0.8-0.5,3.2-0.8,5.3-0.8C91.1,48,99,55.7,99,67 s-9.2,20.9-20.9,20.9C65.7,87.9,54.9,78.1,54.9,61z"></path>
+                          </svg>
+                        </div>
+                        <div class="nt-10">
+                          <div class="user-name">
+                            <h2>Nilesh Gupta</h2>
+                          </div>
+                          <div class="user-desgn">
+                            <h5> MD Vijay Sales</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="user-info-desc">
+                        <p>Prachar is truly at the top with their enormous power of negotiations in the market, the services provided by them has been a pillar to our association with them. They live true to their promise of delivering exceptional offers as compared to any other player in the market.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-bx">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="user-info">
+                        <div class="user-img">
+                          <img src="https://gilli.wpengine.com/wp-content/uploads/2023/10/home-1-testimonial-carousel-4.jpg" alt="">
+                        </div>
+                        <div class="colon-svg">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <path d="M1,61c0-19.8,10.8-37.5,27.2-48.9l14.5,11.6c-8.5,4.5-18.2,15.6-20.6,25.1c0.8-0.5,3.2-0.8,5.3-0.8c10,0,18,7.7,18,19 s-9.5,20.9-20.9,20.9C12.1,87.9,1,78.1,1,61z"></path>
+                            <path d="M54.9,61c0-19.8,10.6-37.5,26.9-48.9l14.8,11.6C88.2,28.2,78.1,39.3,76,48.8c0.8-0.5,3.2-0.8,5.3-0.8C91.1,48,99,55.7,99,67 s-9.2,20.9-20.9,20.9C65.7,87.9,54.9,78.1,54.9,61z"></path>
+                          </svg>
+                        </div>
+                        <div class="nt-10">
+                          <div class="user-name">
+                            <h2>Nilesh Gupta</h2>
+                          </div>
+                          <div class="user-desgn">
+                            <h5> MD Vijay Sales</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="user-info-desc">
+                        <p>Prachar is truly at the top with their enormous power of negotiations in the market, the services provided by them has been a pillar to our association with them. They live true to their promise of delivering exceptional offers as compared to any other player in the market.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-nk-next"></div>
+            <div class="swiper-nk-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clients">
+        <div class="container-fluid">
+          <div class="swiper nkSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/03/logo_LIC.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/03/43_SBI.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/02/Uber.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/02/Ministry-of-Finance.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/03/logo_Liberty-Shoes.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/03/83_Welspun-copy.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/03/83_RBI.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="siper-logos">
+                  <img src="https://prachar.in/wp-content/uploads/2023/02/Aadhar.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-9 pd-50">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="ft-links">
+                    <div class="ft-link-head">
+                      <h2>About us</h2>
+                    </div>
+                    <!-- <div class="ft-brand-logo"><img src="https://prachar.in/wp-content/uploads/2023/02/Prachar-Logo.png" alt=""></div> -->
+                    <div class="ft-description">
+                      <p>As one of the country's leading advertising and media agencies, Prachar goes beyond offering full-fledged advertising and media services by providing clients with a comprehensive suite of services to execute cross-platform marketing and advertising campaigns.</p>
+                      <div class="ft-social">
+                        <div class="social-icons">
+                          <a href="#">
+                            <svg height="16" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="0 0 512.000000 512.000000" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <g stroke="none" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
+                                <path d="M2980 5106 c-288 -45 -490 -143 -656 -318 -140 -148 -227 -321 -276
+                              -548 -19 -86 -21 -138 -25 -542 l-4 -448 -395 0 -394 0 0 -455 0 -455 393 -2
+                              392 -3 3 -1167 2 -1168 470 0 470 0 0 1170 0 1170 390 0 c215 0 390 1 390 3
+                              27 182 116 894 113 900 -2 4 -204 7 -449 7 l-445 0 3 373 c3 364 4 373 27 431
+                              47 117 145 187 293 206 40 5 193 10 341 10 l267 0 -2 408 -3 407 -130 12
+                            c-213 19 -675 25 -775 9z"></path>
+                              </g>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="social-icons">
+                          <a href="#">
+                            <svg class="bi bi-instagram" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="social-icons">
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                            </svg>
+                          </a>
+                        </div>
+                        <div class="social-icons">
+                          <a href="#">
+                            <svg class="bi bi-linkedin" fill="#fff" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="ft-links">
+                    <div class="ft-link-head">
+                      <h2>Information</h2>
+                    </div>
+                    <div class="ft-ul-links">
+                      <ul>
+                        <li>
+                          <a href="#">About Us</a>
+                        </li>
+                        <li>
+                          <a href="#">Services</a>
+                        </li>
+                        <li>
+                          <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                          <a href="#">Career</a>
+                        </li>
+                        <li>
+                          <a href="#">Clients</a>
+                        </li>
+                        <li>
+                          <a href="#">Blogs</a>
+                        </li>
+                        <li>
+                          <a href="#">Contact us</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="ft-links">
+                    <div class="ft-link-head">
+                      <h2>Explore</h2>
+                    </div>
+                    <div class="ft-ul-links">
+                      <ul>
+                        <li>
+                          <a href="#">Print</a>
+                        </li>
+                        <li>
+                        <li>
+                          <a href="#">Media</a>
+                        </li>
+                        <li>
+                          <a href="#">Digital</a>
+                        </li>
+                        <li>
+                          <a href="#">Celebrity Endorsements</a>
+                        </li>
+                        <li>
+                          <a href="#">Ad Film Production</a>
+                        </li>
+                        <li>
+                          <a href="#">Sports Marketing</a>
+                        </li>
+                        <li>
+                          <a href="#">Creative</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="ft-links">
+                    <div class="ft-link-head">
+                      <h2>Mumbai Office</h2>
+                    </div>
+                    <div class="ft-address">
+                      <p>Samkeet Apt. B - Wing. Sant Janabai Marg. Off Hanuman Rd. Vile Parle - E, Mumbai - 57.</p>
+                      <div class="ad-fl">
+                        <div class="tel">
+                          <strong>Tel: </strong>
+                          <span>
+                            <a href="tel:02242111300">(022) 42111300</a>
+                          </span>
+                          <span style="color: #999;">
+                        </div>
+                        <div class="mail">
+                          <strong>Mail: </strong>
+                          </span>
+                          <span>
+                            <a href="mailto: mail@prachar.in">mail@prachar.in</a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="ft-links mt-10">
+                    <div class="ft-link-head">
+                      <h2>Delhi Office</h2>
+                    </div>
+                    <div class="ft-address">
+                      <p>C-62, Shivalik, New Delhi- 110017</p>
+                      <div class="ad-fl">
+                        <div class="tel">
+                          <strong>Mob: </strong>
+                          <span>
+                            <a href="tel:+919319194602">(+91) 9319194602</a>
+                          </span>
+                        </div>
+                        <div class="mail">
+                          <strong>Mail: </strong>
+                          </span>
+                          <span>
+                            <a href="mailto: mail@prachar.in">mail@prachar.in</a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="copyright">
+                <p class="copyright-text">© 1993 - 2024&nbsp;Prachar Communications Pvt ltd. All rights reserved.</p>
+              </div>
+            </div>
+            <div class="col-lg-3" style="background: #282828">
+              <div class="ft-wrap">
+                <div class="ft-contact">
+                  <div class="ft-contact-head">
+                  <h3>Have a project on your mind?</h3>
+                </div>
+                <div class="ft-contact-btn">
+                <a href="#">
+                  <span>Contact Us</span>
+                </a>
     
-}
-
-
-
-
-/* slideshow start */
-
-
-
-
-.slide-inner{
-  position: relative;
-}
-.slide-inner::before{
-  content:"";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.2);
-    
-}
-
-
-.hero-slider {
-  width: 100%;
-  height: 700px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 0;
-}
-
-
-
-.hero-slider .swiper-slide {
-  overflow: hidden;
-  color: #fff;
-}
-
-.hero-slider .swiper-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.hero-slider .slide-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-}
-
-.hero-slider .swiper-button-prev,
-.hero-slider .swiper-button-next {
-  background: transparent;
-  width: 55px;
-  height: 55px;
-  line-height: 53px;
-  margin-top: -30px;
-  text-align: center;
-  border: 2px solid #d4d3d3;
-  border-radius: 55px;
-  opacity:0;
-  visibility:hidden;
-  transition:all .3s ease;
-}
-.hero-slider:hover .swiper-button-prev,
-.hero-slider:hover .swiper-button-next {
-  transform:translateX(0);
-  opacity:1;
-  visibility:visible;
-}
-
-.hero-slider .swiper-button-prev {
-  left: 25px;
-  transform:translateX(50px);
-}
-
-.hero-slider .swiper-button-prev:before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f060";
-  font-size: 15px;
-  color: #d4d3d3;
-  font-style: normal;
-  display: inline-block;
-  vertical-align: middle;
-  font-weight: 900;
-}
-
-.hero-slider .swiper-button-next {
-  right: 25px;
-  transform:translateX(-50px);
-}
-
-.hero-slider .swiper-button-next:before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f061";
-  font-size: 15px;
-  color: #d4d3d3;
-  font-style: normal;
-  display: inline-block;
-  vertical-align: middle;
-  font-weight: 900;
-}
-
-.hero-slider .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  text-align: left;
-  line-height: 12px;
-  font-size: 12px;
-  color: #000;
-  opacity: 0.3;
-  background:#fff;
-  transition:all .2s ease;
-}
-
-.hero-slider .swiper-pagination-bullet-active {
-  opacity:1;
-}
-
-.hero-slider .swiper-container-horizontal > .swiper-pagination-bullets,
-.hero-slider .swiper-pagination-custom,
-.hero-slider .swiper-pagination-fraction {
-  bottom: 30px;
-}
-
-.swiper-pagination {
-  text-align:left;
-}
-
-.hero-slider .swiper-container-horizontal > .swiper-pagination-bullets{ 
-  bottom:50px;
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/*--------------------------------------------------------------
-	#hero-style
---------------------------------------------------------------*/
-.hero-style {
-  height:92vh;
-  transition:all .4s ease;
-}
-
-.hero-style .slide-title,
-.hero-style .slide-text,
-.hero-style .slide-btns {
-  max-width: 690px;
-}
-
-.hero-style .slide-title h2 {
-  font-size: 100px;
-  font-weight: 600;
-  line-height: 1;
-  color: #ffffff;
-  margin: 0 0 40px;
-  text-transform: capitalize;
-  transition:all .4s ease;
-}
-
-
-.hero-style .slide-text p {
-  opacity: 0.8;
-  font-family: Rajdhani;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: normal;
-  color: #ffffff;
-  margin: 0 0 40px;
-  transition:all .4s ease;
-}
-
-
-.hero-style .slide-btns > a:first-child {
-  margin-right: 10px;
-}
-
-
-/*--------------------------------------------------------------
-	#button-style
---------------------------------------------------------------*/
-.theme-btn, .theme-btn-s2{
-    background-color: #ffffff;
-    font-size: 20px;
-  font-weight: 500;
-  line-height: 1.4;
-  text-align: center;
-  color:#2b3b95;
-    padding: 9px 32px;
-    border: 0; 
-  border-radius: 3px;
-    text-transform: uppercase;
-    display: inline-block;
-    line-height: initial;
-  transition:all .4s ease;
-}
-a {
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-.theme-btn-s2{
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #131e4a;
-}
-.theme-btn:hover, .theme-btn-s2:hover, .theme-btn:focus, .theme-btn-s2:focus, .theme-btn:active, .theme-btn-s2:active {
-    background-color:#2b3b95 ;
-    color: #fff;
-}
-.theme-btn-s3{
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-i.fa-chevron-circle-right{
-  height:22px;
-  width:22px;
-}
-a:hover {
-    text-decoration: none;
-}
-
-
-/* about us start */
-
-.about{
-padding: 100px 0;
-}
-.about .cm-sub-heading h2{ 
-font-size: 20px;
-color: #D90A2C;
-text-align: center;
-}
-
-.about .about-content p {
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  line-height: 50px;
-  color: #000;
-  text-align: center;
-}
-
-.image-in-span{
-width: 130px;
-}
-.about-proposals{
-margin-top: 100px;
-}
-.about-proposals .pr-box {
-  text-align: center;
-}
-
-.about-proposals .nk-10{
-margin: 20px 0;
-display: block;
-}
-.about-proposals .pr-box .pr-icons {
-  width: 101px;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.about-proposals .pr-box .pr-icons span{
-  text-align: center;
-}
-.about-proposals .pr-box .pr-count span{
-font-size: 30px;
-font-weight: 700; 
-color: #333;
--webkit-text-stroke: 1px;
-}
-.about-proposals .pr-box .pr-name h3{
-font-size: 26px;
-font-weight: 600;
-color: #333;
-}
-/* services start */
-.services{
-background: #1C1C1C;
-padding: 70px 0;
-}
-.portfolio{
-  padding: 70px 0;
-  /* background: #fab1a02b; */
-  background: #fab1a03b;
-}
-.services .h-left h2, .services .h-left h6, .latest-blogs .h-left h2{
-color: #fff;
-}
-.services .h-left h6, .portfolio .h-left h6, .latest-blogs .h-left h6{
-font-size: 20px;
-font-weight: 500;
-color: #ff3838;
-
-}
-
-.services .h-left h2, .portfolio .h-left h2,  .latest-blogs .h-left h2{
-  font-size: 43px;
-  font-weight: 700;
-  line-height: 52px;
-  margin-top: 10px;
-}
-.list-services{
-  margin: 40px 0;
-  position: sticky;
-  top: 100px;
-}
-.services-list-col {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  gap: 40px;
-  color: #fff;
-  border-bottom: 1px solid #777;
-  padding: 45px 0px;
-  transition: 0.3s all linear;
-  
-}
-
-.d-media{
-transition: 0.40s all linear;
-}
-
-.services-no span, .services-title h2, .servicves-desc p{
-  color: #777;
-}
-
-.services-no:hover span, .services-title h2, .servicves-desc p{
-  color: #777;
-}
-
-.services-no span{
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.servicves-desc{
-  width: 50%;
-  margin: 0 auto;
-  display: block;
-  text-align: left;
-}
-
-.services-title{
-margin-left: 40px;
-width: 220px;
-}
-.services-title h2{
-  font-size: 32px;
-  line-height: 40px; 
-}
-
-.arrow img{
-transform: rotate(-30deg);
-opacity: 0.3;
-width: 80%;
-}
-.transition{
-margin-top: 250px;
-display: none;
-transition: 0.30s all linear;
-}
-
-.tr-100{
-margin-top: 430px;
-}
-
-.transition img{
-  border-radius: 20px;
-  transform: rotate(10deg);
-
-}
-
-.services-list-col:hover .services-no span,
-.services-list-col:hover .services-title h2 {
-color: #fff;
-transition: 0.3s all linear;
-
-}
-.services-list-col:hover .arrow img{
-opacity: 1;
-transition: 0.3s all linear;
-transform: none;
-}
-
-
-/* portfolio start */
-  /* work css */
-  .work{
-    background: #fff7bd78;
-    padding:  80px 0;
-   }
-   .work .cm-left-heading h2{
-       font-weight: 600;
-       font-size: 70px;
-       line-height: 80px;
-       color: #000;
-       text-transform: uppercase;
-   }
-
-  
-   .workbox{
-     margin: 60px 0 0;
-   }
-
-   .workbox .work-showcase .work-screenshot img{
-       /* border-radius: 30px; */
-       /* padding: 10px; */
-       width: 95%;
-       object-fit: cover;
-       object-position: center;
-   }
-   .workbox .work-showcase .work-screenshot{
-       position: relative;
-       /* overflow: hidden; */
-   }
-   .work-screenshot img{
-  position: relative;
-  width: 100%;
-  opacity: 0;
-  /* overflow: hidden; */
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   }
-   .work-screenshot::after{
-       content: "";
-       position: absolute;
-       width: 100%;
-       height: 0%;
-       top: 0;
-       left: 0;
-       background: #ffd800;
-   }
-   .workbox .work-showcase.ws-2, .workbox .work-showcase.ws-4{
-       margin-top: 70px;
-
-   }
-
-   .workbox .work-showcase{
-       margin-bottom: 30px;
-   }
-   .workbox .work-showcase .work-description{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 95%;
-   margin: 20px 0px;
-   }
-
-   .workbox .work-showcase .work-description .work-titile h3{
-       font-size: 28px;
-text-transform: uppercase;
-font-weight: 700;
-
-   }
-
-   .workbox .work-showcase .work-description .work-include span {
-    background: #000;
-    color: #fff;
-    border-radius: 40px;
-    padding: 14px 20px;
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-}
-
-/* testimonial start */
-.testimonials {
-  padding: 100px 0 0;
-}
-
-.head-center{
-text-align: center;
-margin-bottom: 40px;
-}
-
-.head-center h2{
-  font-size: 43px;
-    font-weight: 700;
-    line-height: 52px;
-    margin-top: 20px;
-}
-.testimonials .mySwiper{
-overflow-x: hidden;
-}
-.mySwiper{
-  padding: 88px 0 0;
-}
-.testimonials .swiper-wrapper{
-  background: #D90A2C; 
-}
-.user-info-desc{
-color: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #D90A2C;
-height: 100%;
-padding: 0 40px;
-}
-.user-info .user-img {
-  position: relative;
-  top: -88px;
-  display: block;
-}
-.colon-svg {
-  position: absolute;
-  top: -93px;
-  left: 417px;
-  right: auto;
-  width: 70px;
-  z-index: 9;
-}
-.user-info .user-img img{
-  width: 100%;
-margin: 0 auto;
-display: block;
-}
-
-
-.testimonials .mySwiper {
-  overflow-x: hidden;
-  position: relative;
-  top: -100px;
-}
-
-.nkSwiper{
-overflow-x: hidden;
-}
-
-.testimonials .swiper-slide{
-padding: 0px 100px;
-}
-
-.user-name h2, .user-desgn h5{
-color: #fff;
-}
-
-.nt-10{
-  position: relative;
-  top: -50px;
-}
-.testimonials {
-  position: relative;
-}
-.testimonials .swiper-nk-next {
-  position: absolute;
-  left: 42%;
-  right: auto;
-  top: 77%;
-  background: #fff;
-  width: 50px;
-  height: 50px;
-  background: url(../images/left-arrow-white.png);
-  z-index: 99;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: rotate(180deg);
-}
-.testimonials .swiper-nk-prev {
-  position: absolute;
-  left: auto;
-  right: 57%;
-  top: 77%;
-  background: #fff;
-  width: 50px;
-  height: 50px;
-  background: url(../images/left-arrow-white.png);
-  z-index: 99;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-.testimonials .swiper-slide.swiper-slide-prev, .testimonials .swiper-slide.swiper-slide-next{
-  opacity: 0 !important;
-}
-
-.clients .swiper-slide{
-border: 1px solid #ddd;
-}
-.clients .siper-logos img{
-  
-    width: 50%;
-    margin: 0 auto;
-    display: block;
-
-}
-.clients {
-  position: relative;
-  top: -100px;
-}
-
-.clients .container-fluid {
-overflow-x: hidden;
-padding: 0;
-}
-.clients .siper-logos{
-height: 200px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-footer{
-  background: #1C1C1C;
-  padding: 0px 0;
-}
-.ft-contact-btn {
-  margin: 60px auto;
-  text-align: center;
-  display: block;
-  width: 50%;
-}
-.ft-contact-btn span, .cm-btn span{
-/* background-color:#ff3838; */
-/* background-image: linear-gradient(to left bottom, #ff3833, #fd4c47, #f95d5a, #f46d6b, #ee7b7b); */
-/* background-image: linear-gradient(to bottom, #ff3833, #fd4c47, #f95d5a, #f46d6b, #ee7b7b); */
-/* background-image: linear-gradient(to left bottom, #ff3833, #fe4541, #fc514f, #f95d5b, #f66767); */
-
-/* background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red); */
-
-background-image: linear-gradient(to bottom, #ff3833, #f8452a, #f14f21, #e95817, #e1600d);
-width: 130px;
-height: 130px;
-border-radius: 50%;
-color: #fff;
-font-size: 15px;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: 0.60s all ease-in-out;
-}
-.cm-btn{
-  float: right;
-    margin-right: 100px;
-    margin-top: 37px;
-  
-}
-.cm-btn:hover span{
-  /* background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red); */
-
-  background-image: linear-gradient(to bottom, #ff3833, #f8452a, #f14f21, #e95817, #e1600d);
-  opacity: 1;
-  border: 1px solid transparent;
-  transition: 0.20s all ease-in-out;
-  
-}
-.cm-btn span{
-  background: transparent;
-    border: 1px solid #777;
-    /* opacity: 0.7; */
-}
-
-.portfolio .cm-btn span{
-color: #777;
-opacity: 1;
-}
-
-.portfolio .cm-btn:hover span{
-  color: #fff;
-}
-.ft-off-timings{
-margin: 40px 0;
-}
-
-.ft-off-timings p.tm{
-color: #fff;
-font-size: 18px; 
-font-weight: 700; 
-text-align: center;
-letter-spacing: 1.1px;
-}
-
-.ft-off-timings p.dy{
-  color: #999;
-  font-size: 20px; 
-  font-weight: 400; 
-  text-align: center;
-  letter-spacing: 1.1px;
-}
-footer .ft-links p, .ft-ul-links ul li a, .ft-address span a {
-color: #999;
-}
-.ft-address span {
-  display: inline-block;
-  margin-left: 10px;
-}
-.pd-50{
-padding: 100px 80px;
-}
-.ft-ul-links ul{
-  margin: 0;
-  padding: 0;
-}
-.ft-link-head h2{
-color: #fff;
-}
-.ft-contact h3{
-color: #fff;
-font-size: 38px;
-line-height: 50px;
-text-align: center;
-}
-.ft-wrap {
-padding: 100px;
-}
-/* .ft-links{
-padding: 20px;
-} */
-.ft-link-head h2{
-  font-size: 22px;
-  display: block;
-  margin-bottom: 30px;
-}
-
-.ft-description{
-width: 80%;
-}
-
-.ft-address strong {
-color: #999;
-font-weight: 600;
-}
-.ft-links.mt-10{
-margin-top: 30px;
-}
-hr{
-  color: #777;
-  opacity: 1;
-}
-
-.ft-ul-links ul li{
-  margin-bottom: 14px;
-}
-.social-icons svg{
-fill: #999;
-width: 20px;
-height: 20px;
-}
-
-.ft-social{
-display: flex;
-gap: 30px;
-align-items: center;
-justify-content: start;
-margin-top: 75px;
-}
-.copyright{
-  margin-top: 80px;
-  
-
-}
-.copyright p{
-color: #999;
-text-align: center;
-display: block;
-margin: 0 auto;
-}
-
-.ad-fl{
-display: flex;
-justify-content: start;
-align-items: center;
-gap: 50px;
-}
-footer .col-lg-2{
-position: relative;
-left: -20px
-}
-
-/* latest blogs start */
-.latest-blogs {
- background:  #1C1C1C;
- padding: 70px 0 ;
-}
-.blog-list{
-margin: 60px 0;
-}
-.blog-bx .blog-image{
-  width: 100%;
-height: 100%;
-position: relative;
-}
-.blog-bx .blog-image img{
-  width: 90%;
-height: 100%;
-object-position: center;
-object-fit: cover;
-}
-.blog-bx .rd-btn {
-  position: absolute;
-    right: 83px;
-    bottom: -21px;
-}
-
-.blog-bx .rd-btn span{
-  background: #D90A2C;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.blog-bx .rd-btn span svg{
-  width: 15px;
-  height: 15px;
-  fill: #fff;
- 
-}
-
-.blog-info{
-margin-top: 40px;
-}
-.blog-info h2{
-color: #fff;
-font-size: 28px;
-line-height: 34px;
-font-weight: 500;
-}
-
-/* whatsapp cta */
-
-/*******************************************/
-
-.cbh-phone {
-  position: fixed;
-  right: -30px;
-  bottom: 200px;
-  visibility: hidden;
-  background-color: transparent;
-  width: 200px;
-  cursor: pointer;
-  z-index: 99;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  -webkit-transition: visibility .5s;
-  -moz-transition: visibility .5s;
-  -o-transition: visibility .5s;
-  transition: visibility .5s;
-}
-
-.cbh-phone {
-  visibility: visible;
-}
-
-.cbh-phone .cbh-ph-circle {
-  width: 110px;
-  height: 110px;
-  top: 40px;
-  left: 40px;
-  position: absolute;
-  background-color: transparent;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  border: 2px solid rgba(30,30,30,.4);
-  opacity: .1;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-  -webkit-animation: cbh-circle-anim 2.2s infinite ease-in-out!important;
-  -moz-animation: cbh-circle-anim 2.2s infinite ease-in-out!important;
-  -ms-animation: cbh-circle-anim 2.2s infinite ease-in-out!important;
-  -o-animation: cbh-circle-anim 2.2s infinite ease-in-out!important;
-  animation: cbh-circle-anim 2.2s infinite ease-in-out!important;
-}
-
-.cbh-phone .cbh-ph-circle-fill {
-  width: 74px;
-  height: 74px;
-  top: 58px;
-  left: 58px;
-  position: absolute;
-  background-color: #000;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  border: 2px solid transparent;
-  opacity: .1;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-  -webkit-animation: cbh-circle-fill-anim 2.3s infinite ease-in-out!important;
-  -moz-animation: cbh-circle-fill-anim 2.3s infinite ease-in-out!important;
-  -ms-animation: cbh-circle-fill-anim 2.3s infinite ease-in-out!important;
-  -o-animation: cbh-circle-fill-anim 2.3s infinite ease-in-out!important;
-  animation: cbh-circle-fill-anim 2.3s infinite ease-in-out!important;
-  opacity: 0!important;
-}
-
-.cbh-phone .cbh-ph-img-circle1 {
-  width: 50px;
-  height: 50px;
-  top: 70px;
-  left: 70px;
-  position: absolute;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF+mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTAyLTIyVDE1OjIxOjM0KzA1OjMwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0wMi0yMlQxNToyNDozNCswNTozMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0wMi0yMlQxNToyNDozNCswNTozMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1NjEyZGExOC05NjBiLWRiNDAtYTZjYi1kNDkyYTQ2NTJhNGIiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo5MTk0NDBkYS1hMTc1LWRkNGUtOWE0YS05MTE0NjNhMjAwNWMiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDplNzc3MzM0Ni0yNDA4LTYzNGYtYWYzZi1mNTYzNjBjZjA2MWIiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmU3NzczMzQ2LTI0MDgtNjM0Zi1hZjNmLWY1NjM2MGNmMDYxYiIgc3RFdnQ6d2hlbj0iMjAyMS0wMi0yMlQxNToyMTozNCswNTozMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NjEyZGExOC05NjBiLWRiNDAtYTZjYi1kNDkyYTQ2NTJhNGIiIHN0RXZ0OndoZW49IjIwMjEtMDItMjJUMTU6MjQ6MzQrMDU6MzAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4q/AY3AAAQNUlEQVRoga2aaZSdRZnHf1Xvdt+79L29d5JOOovZDMkQAoaAA+gBVzyozHEBFBlkHNTRAXUWlTCoZ9xm0VFkPI4RyBxEcQGPDOpIhlEZAgRZkpCFJJ3eku6+3X335d2q5kMnndzuTtLR/PtT11P1VP1rebb3Cq01s6F3eJSRsQksIXAtEyVAY6CVJtQhlmFhqAgZi1FCo1QkLM8/L/TDi0KtVwopFwqt2oUQGYQwtNZFrRmXWh+NTOOAtKwXnCh8TiJKoWMTIui0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');
-  background-size: 40px 40px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-  border: 2px solid transparent;
-  opacity: 1;
-  -webkit-animation: cbh-circle-img-anim 0s infinite ease-in-out!important;
-  -moz-animation: cbh-circle-img-anim 0s infinite ease-in-out!important;
-  -ms-animation: cbh-circle-img-anim 0s infinite ease-in-out!important;
-  -o-animation: cbh-circle-img-anim 0s infinite ease-in-out!important;
-  animation: cbh-circle-img-anim 0s infinite ease-in-out!important;
-}
-
-@-moz-keyframes cbh-circle-anim {
-  0% {
-      -moz-transform: rotate(0deg) scale(0.5) skew(1deg);
-      opacity: .1;
-      -moz-opacity: .1;
-      -webkit-opacity: .1;
-      -o-opacity: .1;
-  }
-
-  30% {
-      -moz-transform: rotate(0deg) scale(.7) skew(1deg);
-      opacity: .5;
-      -moz-opacity: .5;
-      -webkit-opacity: .5;
-      -o-opacity: .5;
-  }
-
-  100% {
-      -moz-transform: rotate(0deg) scale(1) skew(1deg);
-      opacity: .6;
-      -moz-opacity: .6;
-      -webkit-opacity: .6;
-      -o-opacity: .1;
-  }
-}
-
-@-webkit-keyframes cbh-circle-anim {
-  0% {
-      -webkit-transform: rotate(0deg) scale(0.5) skew(1deg);
-      -webkit-opacity: .1;
-  }
-
-  30% {
-      -webkit-transform: rotate(0deg) scale(.7) skew(1deg);
-      -webkit-opacity: .5;
-  }
-
-  100% {
-      -webkit-transform: rotate(0deg) scale(1) skew(1deg);
-      -webkit-opacity: .1;
-  }
-}
-
-@-o-keyframes cbh-circle-anim {
-  0% {
-      -o-transform: rotate(0deg) kscale(0.5) skew(1deg);
-      -o-opacity: .1;
-  }
-
-  30% {
-      -o-transform: rotate(0deg) scale(.7) skew(1deg);
-      -o-opacity: .5;
-  }
-
-  100% {
-      -o-transform: rotate(0deg) scale(1) skew(1deg);
-      -o-opacity: .1;
-  }
-}
-
-@keyframes cbh-circle-anim {
-  0% {
-      transform: rotate(0deg) scale(0.5) skew(1deg);
-      opacity: .1;
-  }
-
-  30% {
-      transform: rotate(0deg) scale(.7) skew(1deg);
-      opacity: .5;
-  }
-
-  100% {
-      transform: rotate(0deg) scale(1) skew(1deg);
-      opacity: .1;
-  }
-}
-
-@-moz-keyframes cbh-circle-fill-anim {
-  0% {
-      -moz-transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-
-  50% {
-      -moz-transform: rotate(0deg) -moz-scale(1) skew(1deg);
-      opacity: .2;
-  }
-
-  100% {
-      -moz-transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-}
-
-@-webkit-keyframes cbh-circle-fill-anim {
-  0% {
-      -webkit-transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-
-  50% {
-      -webkit-transform: rotate(0deg) scale(1) skew(1deg);
-      opacity: .2;
-  }
-
-  100% {
-      -webkit-transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-}
-
-@-o-keyframes cbh-circle-fill-anim {
-  0% {
-      -o-transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-
-  50% {
-      -o-transform: rotate(0deg) scale(1) skew(1deg);
-      opacity: .2;
-  }
-
-  100% {
-      -o-transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-}
-
-@keyframes cbh-circle-fill-anim {
-  0% {
-      transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-
-  50% {
-      transform: rotate(0deg) scale(1) skew(1deg);
-      opacity: .2;
-  }
-
-  100% {
-      transform: rotate(0deg) scale(0.7) skew(1deg);
-      opacity: .2;
-  }
-}
-
-@keyframes cbh-circle-img-anim {
-  0% {
-      transform: rotate(0deg) scale(1) skew(1deg);
-  }
-
-  10% {
-      transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  20% {
-      transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  30% {
-      transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  40% {
-      transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  100%,50% {
-      transform: rotate(0deg) scale(1) skew(1deg);
-  }
-}
-
-@-moz-keyframes cbh-circle-img-anim {
-  0% {
-      transform: rotate(0deg) scale(1) skew(1deg);
-  }
-
-  10% {
-      -moz-transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  20% {
-      -moz-transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  30% {
-      -moz-transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  40% {
-      -moz-transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  100%,50% {
-      -moz-transform: rotate(0deg) scale(1) skew(1deg);
-  }
-}
-
-@-webkit-keyframes cbh-circle-img-anim {
-  0% {
-      -webkit-transform: rotate(0deg) scale(1) skew(1deg);
-  }
-
-  10% {
-      -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  20% {
-      -webkit-transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  30% {
-      -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  40% {
-      -webkit-transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  100%,50% {
-      -webkit-transform: rotate(0deg) scale(1) skew(1deg);
-  }
-}
-
-@-o-keyframes cbh-circle-img-anim {
-  0% {
-      -o-transform: rotate(0deg) scale(1) skew(1deg);
-  }
-
-  10% {
-      -o-transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  20% {
-      -o-transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  30% {
-      -o-transform: rotate(-25deg) scale(1) skew(1deg);
-  }
-
-  40% {
-      -o-transform: rotate(25deg) scale(1) skew(1deg);
-  }
-
-  100%,50% {
-      -o-transform: rotate(0deg) scale(1) skew(1deg);
-  }
-}
-
-.cbh-phone .cbh-ph-circle {
-  border-color: rgb(64 195 81);
-}
-
-.cbh-phone .cbh-ph-circle-fill {
-  background-color: rgb(64 195 81);
-}
-
-.cbh-phone .cbh-ph-img-circle1 {
-  background-color: transparent;
-}
-
-/*******************************************/
+                </div>
+                <div class="ft-off-timings">
+                  <p class="tm"> 10:00 AM - 06.30 PM</p>
+                  <p class="dy"> Monday - Friday</p>
+                </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div id="wpdiv" class="cbh-phone"><a class="whatsappbtn" href="https://api.whatsapp.com/send?phone=+91 9319194602&amp;text=Hi, I want to know more about the services" style="text-decoration:none;" target="_blank"><div class="cbh-ph-circle"></div><div class="cbh-ph-circle-fill"></div><div class="cbh-ph-img-circle1"></div></a></div>
+      <!-- cursor animation -->
+      <div class="cursor default-cursor" id="cursor"></div>
+      <div class="cursor-follower default-cursor-follower" id="cursor-follower"></div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- smooth scroller js start -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=3.10.0"></script>
+    <!-- <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?v=987"></script>-->
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.10.0"></script>
+    <!-- cursor animation -->
+    <script>
+      // gsap.set(".ws-2", {
+      //   yPercent: -50
+      // });
+      // gsap.set(".ws-4", {
+      //   yPercent: 70
+      // });
+      // gsap.to(".ws-2", {
+      //   yPercent: 10,
+      //   ease: "none",
+      //   scrollTrigger: {
+      //     scrub: 4
+      //   }
+      // });
+      // gsap.to(".ws-4", {
+      //   yPercent: -20,
+      //   ease: "none",
+      //   scrollTrigger: {
+      //     scrub: 4
+      //   }
+      // });
+    </script>
+    <script>
+      var cursorFollower = document.getElementById("cursor-follower");
+      var cursor = {
+        x: 0,
+        y: 0
+      };
+      var follower = {
+        x: 0,
+        y: 0,
+        vx: 0,
+        vy: 0
+      };
+      const stiffness = 0.1; // Spring stiffness
+      const damping = 0.05; // Damping coefficient
+      document.addEventListener("mousemove", function(e) {
+        cursor.x = e.clientX;
+        cursor.y = e.clientY;
+        var cursor_el = document.getElementById("cursor");
+        cursor_el.style.left = e.clientX + "px";
+        cursor_el.style.top = e.clientY + "px";
+      });
+      document.addEventListener("DOMContentLoaded", function(event) {
+        function animate() {
+          // Calculate spring force
+          let dx = cursor.x - follower.x;
+          let dy = cursor.y - follower.y;
+          let springForceX = dx * stiffness;
+          let springForceY = dy * stiffness;
+          // Damping
+          follower.vx *= damping;
+          follower.vy *= damping;
+          // Apply forces to velocity
+          follower.vx += springForceX;
+          follower.vy += springForceY;
+          // Update position
+          follower.x += follower.vx;
+          follower.y += follower.vy;
+          // Apply position to the DOM element
+          cursorFollower.style.left = follower.x + "px";
+          cursorFollower.style.top = follower.y + "px";
+          requestAnimationFrame(animate);
+        }
+        animate();
+      });
+    </script>
+    <!-- slideshow js -->
+    <script>
+      // HERO SLIDER
+      var menu = [];
+      jQuery('.swiper-slide').each(function(index) {
+        menu.push(jQuery(this).find('.slide-inner').attr("data-text"));
+      });
+      var interleaveOffset = 0.5;
+      var swiperOptions = {
+        loop: true,
+        speed: 1000,
+        parallax: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        watchSlidesProgress: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        on: {
+          progress: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              var slideProgress = swiper.slides[i].progress;
+              var innerOffset = swiper.width * interleaveOffset;
+              var innerTranslate = slideProgress * innerOffset;
+              swiper.slides[i].querySelector(".slide-inner").style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+            }
+          },
+          touchStart: function() {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = "";
+            }
+          },
+          setTransition: function(speed) {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = speed + "ms";
+              swiper.slides[i].querySelector(".slide-inner").style.transition = speed + "ms";
+            }
+          }
+        }
+      };
+      var swiper = new Swiper(".swiper-container", swiperOptions);
+      // DATA BACKGROUND IMAGE
+      var sliderBgSetting = $(".slide-bg-image");
+      sliderBgSetting.each(function(indx) {
+        if ($(this).attr("data-background")) {
+          $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+      });
+    </script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+      // create the smooth scroller FIRST!
+      const smoother = ScrollSmoother.create({
+        content: "#main",
+        smooth: 3,
+        normalizeScroll: true,
+        ignoreMobileResize: true,
+        effects: true,
+        //preventDefault: true,
+        //ease: 'power4.out',
+        //smoothTouch: 0.1, 
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-nk-next",
+          prevEl: ".swiper-nk-prev",
+        },
+        loop: true,
+        effect: 'fade',
+      });
+    </script>
+    <script>
+      var swiper = new Swiper(".nkSwiper", {
+        slidesPerView: 7,
+        pagination: {
+          clickable: true,
+        },
+        loop: true,
+        speed: 1000,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('#digital').mouseenter(function() {
+          $('.d-digital').css("display", "block");
+        })
+        $('#digital').mouseleave(function() {
+          $('.d-digital').css("display", "none");
+        })
+
+        $('#print').mouseenter(function() {
+          $('.d-print').css("display", "block");
+        })
+        $('#print').mouseleave(function() {
+          $('.d-print').css("display", "none");
+        })
+
+        $('#media').mouseenter(function() {
+          $('.d-media').css("display", "block");
+        })
+        $('#media').mouseleave(function() {
+          $('.d-media').css("display", "none");
+        })
+
+        $('#sports-marketing').mouseenter(function() {
+          $('.d-sports').css("display", "block");
+        })
+        $('#sports-marketing').mouseleave(function() {
+          $('.d-sports').css("display", "none");
+        })
+
+        $('#celebrity-endors').mouseenter(function() {
+          $('.d-sports').css("display", "block");
+        })
+        $('#celebrity-endors').mouseleave(function() {
+          $('.d-sports').css("display", "none");
+        })
+
+        $('#ad-film').mouseenter(function() {
+          $('.d-adfilm').css("display", "block");
+        })
+        $('#ad-film').mouseleave(function() {
+          $('.d-adfilm').css("display", "none");
+        })
+        $('#creative').mouseenter(function() {
+          $('.d-creative').css("display", "block");
+        })
+        $('#creative').mouseleave(function() {
+          $('.d-creative').css("display", "none");
+        })
+      })
+    </script>
+  </body>
+</html>
