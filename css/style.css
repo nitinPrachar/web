@@ -529,14 +529,41 @@ opacity: 0.3;
 width: 80%;
 }
 .transition{
-margin-top: 250px;
+margin-top: 0px;
 display: none;
 transition: 0.30s all linear;
 }
 
-.tr-100{
-margin-top: 430px;
+.mt-0{
+margin-top: 0;
 }
+
+.mt-1{
+  margin-top: 120px !important;
+  }
+  .mt-2{
+    margin-top: 220px !important;
+    }
+
+    .mt-3{
+      margin-top: 320px !important;
+      }
+
+      .mt-4{
+        margin-top: 420px !important;
+        }
+
+        .mt-5{
+          margin-top: 480px !important;
+          }
+          .mt-6{
+            margin-top: 750px !important;
+            }
+          .mt-7{
+            margin-top: 850px !important;
+            }
+
+
 
 .transition img{
   border-radius: 20px;
@@ -545,7 +572,8 @@ margin-top: 430px;
 }
 
 .services-list-col:hover .services-no span,
-.services-list-col:hover .services-title h2 {
+.services-list-col:hover .services-title h2,
+.services-list-col:hover .servicves-desc p {
 color: #fff;
 transition: 0.3s all linear;
 
