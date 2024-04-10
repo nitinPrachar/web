@@ -79,7 +79,10 @@ header{
   z-index: 99; */
   /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
-
+header .container-fluid {
+padding: 0 40px;
+overflow-x: hidden;
+}
 header .logo{
 width: 80%;
 }
@@ -97,7 +100,7 @@ list-style: none;
 }
 header .nav-links ul li a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   color: #333;
   letter-spacing: 1.2px;
@@ -106,27 +109,50 @@ header .nav-links ul li a {
 
 .get-quote{
 display: flex;
-justify-content: center;
+justify-content: end;
 align-items: center;
 height: 60px;
-gap: 20px;
+gap: 10px;
 }
 
 .get-quote a{
 color: #333;
-letter-spacing: 2px;
+letter-spacing: 1px;
 font-weight: 600;
-font-size: 20px;
+font-size: 18px;
 }
-
+.get-quote .icon{
+  border: 1px solid #333;
+  width: 20pxc;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .icon svg{
-width: 20px;
-height: 20px;
+width: 16px;
+height: 16px;
 }
 
+.quote-form{
+  /* background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red); */
+  background-image: linear-gradient(to bottom, #ff3833, #f8452a, #f14f21, #e95817, #e1600d);
+  margin-right: 32px;
+  margin-left: 18px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 6px;
+}
 
-
-
+.quote-form span{
+  color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    
+}
 
 
 
@@ -761,12 +787,14 @@ footer{
 /* background-image: linear-gradient(to bottom, #ff3833, #fd4c47, #f95d5a, #f46d6b, #ee7b7b); */
 /* background-image: linear-gradient(to left bottom, #ff3833, #fe4541, #fc514f, #f95d5b, #f66767); */
 
-background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red);
+/* background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red); */
+
+background-image: linear-gradient(to bottom, #ff3833, #f8452a, #f14f21, #e95817, #e1600d);
 width: 130px;
 height: 130px;
 border-radius: 50%;
 color: #fff;
-font-size: 14px;
+font-size: 15px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -779,16 +807,27 @@ transition: 0.60s all ease-in-out;
   
 }
 .cm-btn:hover span{
-  background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red);
+  /* background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red); */
+
+  background-image: linear-gradient(to bottom, #ff3833, #f8452a, #f14f21, #e95817, #e1600d);
   opacity: 1;
   border: 1px solid transparent;
-  transition: 0.50s all ease-in-out;
+  transition: 0.20s all ease-in-out;
   
 }
 .cm-btn span{
   background: transparent;
     border: 1px solid #777;
-    opacity: 0.7;
+    /* opacity: 0.7; */
+}
+
+.portfolio .cm-btn span{
+color: #777;
+opacity: 1;
+}
+
+.portfolio .cm-btn:hover span{
+  color: #fff;
 }
 .ft-off-timings{
 margin: 40px 0;
