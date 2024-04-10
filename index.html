@@ -27,7 +27,7 @@
                 <img src="images/Prachar-Logo.png" alt="Prachar Communications Logo" class="img-fluid">
               </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-7">
               <div class="nav-links">
                 <nav>
                   <ul>
@@ -45,7 +45,7 @@
                     </li>
                     <li>
                       <a href="#">Clients</a>
-                    </li>
+                    </li> 
                     <li>
                       <a href="#">Blogs</a>
                     </li>
@@ -56,10 +56,10 @@
                 </nav>
               </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="get-quote">
                 <div class="quote-number">
-                  <a href="telto: +91 7039142011"> +91 703-914-2011 </a>
+                  <a href="tel:02242111300">022-421-11-300 </a>
                 </div>
                 <div class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -67,7 +67,13 @@
                     <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                   </svg>
                 </div>
+                <div class="quote-form">
+                  <a href="#">
+                    <span>Get Quote </span>
+                  </a>
+                </div>
               </div>
+          
             </div>
           </div>
         </div>
@@ -242,23 +248,23 @@
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
                   </div>
                   <div class="d-digital transition">
-                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F8.7b1a6d83.png&w=384&q=75" alt="">
                   </div>
                   <div class="d-celebrity transition">
-                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F6.4e7b538b.png&w=384&q=75" alt="">
                   </div>
                   <div class="d-adfilm transition">
-                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.fce67014.png&w=384&q=75" alt="">
                   </div>
                   <div class="d-sports transition">
-                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
+                    <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2.37277019.png&w=384&q=75" alt="">
                   </div>
                   <div class="d-creative transition">
                     <img src="https://dgeniussolutions.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3.17901794.png&w=384&q=75" alt="">
                   </div>
                 </div>
                 <div class="col-lg-8">
-                  <div class="services-list-col">
+                  <div class="services-list-col" id="print">
                     <div class="services-no">
                       <span>01</span>
                     </div>
@@ -286,7 +292,7 @@
                       <img src="images/right-arrow.png" alt="">
                     </div>
                   </div>
-                  <div class="services-list-col">
+                  <div class="services-list-col" id="Digital"> 
                     <div class="services-no">
                       <span>03</span>
                     </div>
@@ -300,7 +306,7 @@
                       <img src="images/right-arrow.png" alt="">
                     </div>
                   </div>
-                  <div class="services-list-col">
+                  <div class="services-list-col" id="celebrity-endors">
                     <div class="services-no">
                       <span>04</span>
                     </div>
@@ -314,7 +320,7 @@
                       <img src="images/right-arrow.png" alt="">
                     </div>
                   </div>
-                  <div class="services-list-col">
+                  <div class="services-list-col" id="sports-marketing">
                     <div class="services-no">
                       <span>05</span>
                     </div>
@@ -328,7 +334,7 @@
                       <img src="images/right-arrow.png" alt="">
                     </div>
                   </div>
-                  <div class="services-list-col">
+                  <div class="services-list-col" id="ad-film">
                     <div class="services-no">
                       <span>06</span>
                     </div>
@@ -342,7 +348,7 @@
                       <img src="images/right-arrow.png" alt="">
                     </div>
                   </div>
-                  <div class="services-list-col">
+                  <div class="services-list-col" id="creative">
                     <div class="services-no">
                       <span>07</span>
                     </div>
@@ -1073,11 +1079,45 @@
     </script>
     <script>
       $(document).ready(function() {
-        $('.services-list-col').mouseenter(function() {
+        $('#digital').mouseenter(function() {
+          $('.d-digital').css("display", "block");
+        })
+        $('#digital').mouseleave(function() {
+          $('.d-digital').css("display", "none");
+        })
+
+        $('#print').mouseenter(function() {
+          $('.d-print').css("display", "block");
+        })
+        $('#print').mouseleave(function() {
+          $('.d-print').css("display", "none");
+        })
+
+        $('#media').mouseenter(function() {
           $('.d-media').css("display", "block");
         })
-        $('.services-list-col').mouseleave(function() {
+        $('#media').mouseleave(function() {
           $('.d-media').css("display", "none");
+        })
+
+        $('#sports-marketing').mouseenter(function() {
+          $('d.sports').css("display", "block");
+        })
+        $('#sports-marketing').mouseleave(function() {
+          $('.d-sports').css("display", "none");
+        })
+
+        $('#ad-film').mouseenter(function() {
+          $('.d-adfilm').css("display", "block");
+        })
+        $('#ad-film').mouseleave(function() {
+          $('.d-adfilm').css("display", "none");
+        })
+        $('#creative').mouseenter(function() {
+          $('.d-creative').css("display", "block");
+        })
+        $('#creative').mouseleave(function() {
+          $('.d-creative').css("display", "none");
         })
       })
     </script>
