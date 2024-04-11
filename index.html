@@ -67,7 +67,7 @@
                     <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
                   </svg>
                 </div>
-                <div class="quote-form">
+                <div class="quote-form" data-bs-toggle="modal" data-bs-target="#exampleModal"  >
                   <a href="#">
                     <span>Get Quote </span>
                   </a>
@@ -902,6 +902,56 @@
           </div>
         </div>
       </footer>
+
+<!-- popup -->
+<div aria-labelledby="exampleModalLabel" class="modal fade request-demo-popup common-popup" id="exampleModal" tabindex="-1" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-body"><button aria-label="Close" class="btn-close close-btn" data-bs-dismiss="modal" type="button"><svg class="bi bi-x" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path> </svg></button>
+  
+  <div class="clear"></div>
+  
+  <div class="content-popup">
+  <form action="" enctype="multipart/form-data" id="send_request_demo" method="post" onsubmit="return form_validate_jquery('#send_request_demo')">
+  <div class="row">
+  <div class="col-lg-5">
+  <div class="left-image-part"><img alt="Happy LaborEdge Users" class="img-fluid" src="images/red-conatct-form.jpg"></div>
+  </div>
+  
+  <div class="col-lg-7">
+  <div class="request-demo-from">
+  <h3>How can we help you grow</h3>
+  
+  <p>Anything you ask, no matter how small, will make a big
+    difference in helping us.</p>
+  
+  <p>Please fill the details or give us a call at (022) 42111300</p>
+  
+  <div class="request-from">
+  <div class="mb-3"><input class="form-control" name="name" placeholder="Name*" title="Name" type="text" validation="full_name"></div>
+  <!--div class="mb-3"><input class="form-control" name="companyname" placeholder="Company Name" title="Company Name" type="text" /></div-->
+  
+  <div class="mb-3"><input class="form-control" name="email" placeholder="Email*" title="Email" type="email" validation="email"></div>
+  
+  <div class="mb-3"><input class="form-control" id="phone" name="phone" placeholder="Phone*" title="Mobile" type="text" validation="mobile-mask"></div>
+  
+  <div class="mb-3"><textarea cols="3" name="comment" placeholder="Comment" rows="3" title="Comment"></textarea></div>
+  
+  <div class="clear"></div>
+  <input class="camefrom" name="camefrom" type="hidden" value="https://www.google.com/">
+  <input name="leadpage" type="hidden" value="Learn More"> <input name="page" type="hidden" value="Contact Us">
+   <input class="quote-form " id="Request-form" type="submit" value="Submit">
+   <button class="red-btn submiting_btn disabled" id="submitting" style="display:none;">
+    <img class="img-fluid" src="/images/loding.gif"> Submitting</button></div>
+  </div>
+  </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 
       <div id="wpdiv" class="cbh-phone"><a class="whatsappbtn" href="https://api.whatsapp.com/send?phone=+91 9319194602&amp;text=Hi, I want to know more about the services" style="text-decoration:none;" target="_blank"><div class="cbh-ph-circle"></div><div class="cbh-ph-circle-fill"></div><div class="cbh-ph-img-circle1"></div></a></div>
       <!-- cursor animation -->
