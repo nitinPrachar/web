@@ -428,8 +428,13 @@ margin-top: 100px;
 .about-proposals .pr-box {
   text-align: center;
 }
-
-.about-proposals .nk-10{
+.about-proposals .pr-box:hover .pr-icons svg{
+fill: #ff3838;
+}
+.about-proposals .pr-box:hover .pr-name h3{
+  color: #ff3838;
+}
+.about-proposals .nk-10{  
 margin: 20px 0;
 display: block;
 }
@@ -839,11 +844,25 @@ justify-content: center;
 align-items: center;
 transition: 0.60s all ease-in-out;
 }
+.cm-btn img, .ft-contact-btn img{
+  width: 25px;
+  transform: rotate(-87deg);
+  margin-left: -22px;
+  margin-top: -32px;
+  opacity: 0;
+}
+
+.ft-contact-btn img{
+  opacity: 1;
+}
 .cm-btn{
   float: right;
     margin-right: 100px;
     margin-top: 37px;
   
+}
+.cm-btn:hover img{
+  opacity: 1;
 }
 .cm-btn:hover span{
   /* background-image: linear-gradient(to left bottom, red, #FF3E38, red, red, red); */
@@ -1531,13 +1550,13 @@ outline: none;
 
 
 
-@media only screen and (min-width: 1366px) and (max-width: 1600px) {
+@media only screen and (min-width: 1441px) and (max-width: 1600px) {
   header .container-fluid {
     padding: 0 20px;
     overflow-x: hidden;
 }
 header .nav-links ul li{
-  padding: 0 20px;
+  padding: 0 18px;
 }
 .get-quote a{
   font-size: 15px;
@@ -1552,14 +1571,25 @@ padding: 80px 70px;
 .ft-wrap{
   padding: 80px 60px;
 }
+.quote-form {
+  margin: 0;
+}
+.common-popup .content-popup .request-demo-from input, .common-popup .content-popup .request-demo-from textarea{
+  padding: 13px 26px;
+}
 
-
+.common-popup .content-popup .request-demo-from{
+  padding: 30px 45px;
+}
+.common-popup .content-popup .request-demo-from h3{
+  font-size: 28px;
+}
 
 
 }
 
 
-@media only screen and (min-width: 1280px) and (max-width: 1366px){
+@media only screen and (min-width: 1280px) and (max-width: 1440px){
   header .nav-links ul li{
     padding: 0 15px;
   }
@@ -1615,5 +1645,16 @@ header .nav-links ul li a{
 header .nav-links ul li {
   padding: 0 13px;
 }
+.common-popup .content-popup .request-demo-from input, .common-popup .content-popup .request-demo-from textarea{
+  padding: 13px 26px;
+}
+
+.common-popup .content-popup .request-demo-from{
+  padding: 30px 45px;
+}
+.common-popup .content-popup .request-demo-from h3{
+  font-size: 25px;
+}
+
 
 }
