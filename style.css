@@ -1,0 +1,484 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+*{
+	font-family: 'Quicksand',sans-serif !important;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.img-fluid{
+max-width: 100%;
+height: auto;
+}
+.pos-rel{
+position: relative;
+}
+/* header start */
+
+ .h-label {
+position: relative;
+}
+.h-megamenu {
+    width: 1280px;
+    background: #fcfcfd;
+    position: absolute;
+    top: 90px;
+	left: -300px;
+    min-width: 100%;
+    padding: 10px 40px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	display: none;
+}
+
+.pos-rel:hover .h-megamenu {
+display: block;
+}
+.h-megamenu .d-links ul li a{
+	font-size: 14px;
+	color: #333;
+	font-weight: 500;
+}
+
+.h-megamenu .d-links h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    width: 120px;
+    line-height: 39px;
+}
+.h-megamenu .d-links ul{
+	display: block;
+	margin-top: 20px;
+}
+
+.h-megamenu .d-links ul li{
+	margin-bottom: 20px;
+}
+.d-img {
+	display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.d-img .cm-head-block{
+width: 160px;
+height: 170px;
+}
+
+.d-img .cm-head-block img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.h-megamenu ul{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;	
+
+}
+.h-label span {
+    background: #c44569;
+    color: #fff;
+    font-size: 11px;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: -14px;
+    padding: 5px;
+}
+.nav-links ul.nav-link-flex{
+display: flex;
+gap: 45px;
+align-items: center;
+justify-content: center;
+height: 90px;
+}
+ul.nav-link-flex li.pos-rel a.h-label {
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+.nav-links ul li a {
+    /* color: #574b90; */
+	color: #333;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+}
+.hero-slides{
+width: 100%;
+height: 100%;
+}
+.hero-slides img{
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+
+}
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,10%,0);
+        transform: translate3d(0,10%,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0,10%,0);
+        transform: translate3d(0,10%,0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp
+}
+
+.animate__animated {
+	animation-duration: 0.30s;
+}
+header{
+	height: 90px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background: #fff;
+	z-index: 99;
+
+}
+.icon-list{
+display: flex;
+align-items: center;
+gap: 20px;
+height: 90px;
+
+}
+.icon-list svg{
+width: 25px;
+height: 25px;
+}
+.icon-list svg path {
+	fill: #c44569;
+}
+
+.enquiry a {
+    font-size: 16px;
+    font-weight: 600;
+    background: #574b90;
+    color: #fff;
+    border-radius: 30px;
+    padding: 15px 25px;
+}
+ .bg-circ{
+width: 40px;
+    height: 40px;
+    background: #f5cd793d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 11px;
+	cursor: pointer;
+	
+} 
+.category-slides img{
+	width: 258px;
+	height: 350px;
+	border-radius: 129px 129px 0 0;
+	margin: 0 auto;
+}
+.logo {
+    position: relative;
+    top: 0;
+    width: 70%;
+}
+.logo img{
+	width: 100%;
+}
+.cm-btn .enquiry {
+	text-align: center;	
+}
+.cm-btn .enquiry a {
+    text-align: center;
+    margin: 30px auto 0;
+    display: inline-block;
+}
+
+/* header end */
+
+/* first banner start */
+
+.banner-fil .slick-arrow, .collection-col .slick-arrow, .category-col .slick-arrow {
+display: none !important;
+}
+.banner-fil{
+margin-top: 90px;
+}
+.cm-heading{
+text-align: center;
+margin-bottom: 60px;
+}
+.cm-heading h2{
+	font-size: 38px;
+	font-weight: 700;
+	color: #333;
+	text-transform: capitalize;
+
+}
+
+.cm-heading p{
+	margin-top: 20px;
+	font-size: 16px;
+	text-align: center;
+	}
+.category, .collections, .products, .essentials, .education {
+margin: 70px auto 90px;
+width: 95%;
+}
+.slick-arrow{
+outline: none;
+border: none;
+font-size: 0;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.category-col{
+position: relative;
+}
+.category-col .slick-prev {
+position: absolute;
+top: 50%;
+left: 10px;
+z-index: 1;
+
+}
+
+.category-col .slick-next {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	z-index: 1;
+	
+	}
+
+
+.collection-slides img{
+	border-radius: 20px;
+	margin: 0 auto;
+	width: 412px;
+	height: 360px;
+}
+
+/* product slider  */
+
+.main-products-slider img{
+	width: 330px;
+	height: 460px;
+	object-fit: cover;
+	object-position: center;
+}
+.products .col-lg-2{
+width: 20% !important;
+margin: 0 auto;
+}
+ .product-info .product-flex h2{
+font-size: 16px;
+color: #333;
+font-weight: 600;
+margin-bottom: 10px;
+line-height: 22px;
+text-transform: capitalize;
+}
+
+.product-info .product-flex h3 {
+	font-size: 16px;
+    font-weight: 700;
+    /* color: #c44569; */
+	color: #574b90;
+}
+.product-info .product-flex{
+	width: 70%;
+}
+.product-info {
+	margin: 20px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.row.mt-10 {
+margin-top: 40px;
+}
+
+.product-reviews svg path{
+fill: #c44569;
+}
+
+/* essentials start */
+.essentials-product-info h2{
+	font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.essentials-product-info{
+	display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+	padding: 20px;
+}
+.essentials-product-info p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+.essentials-product-image img{
+width: 100%;
+}
+
+/* eucation start */
+.education-info h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.education-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+
+.education-info p{
+	font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+.education {
+    margin-top: 100px;
+    background: #fbf5f5;
+    padding: 90px 0;
+}
+.educational-pr-images{
+display: flex;
+align-items: center;
+position: relative;
+justify-content: center;
+}
+
+
+.education-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: start;
+}
+
+.ed-1{
+	position: relative;
+    top: -100px;
+    z-index: 3;
+    left: 70px;
+}
+.ed-2{
+	position: relative;
+    z-index: 2;
+}
+.ed-3{
+	position: relative;
+    z-index: 1;
+    left: -45px;
+    top: -45px;
+}
+.ed-1 img{
+	width: 209px;
+	height: 250px;
+}
+.ed-2 img{
+	width: 280px;
+	height: 340px;
+	box-shadow:  0 10px 15px #0000004d;
+}
+
+.ed-3 img{
+	width: 250px;
+	height: 365px;
+}
+
+
+
+@media only screen and (min-width: 1600px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1440px;
+}
+}
