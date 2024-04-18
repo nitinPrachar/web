@@ -77,7 +77,19 @@ position: relative;
 	display: none;
 }
 
-.pos-rel:hover .h-megamenu {
+.toy {
+    width: 150px;
+    height: 100%;
+    right: -992px;
+    position: absolute;
+    left: auto;
+    z-index: -1;
+    top: 288px;
+    transform: rotate(5deg);
+    display: none;
+}
+
+.pos-rel:hover .h-megamenu, .pos-rel:hover .toy {
 display: block;
 }
 .h-megamenu .d-links ul li a{
@@ -464,15 +476,19 @@ justify-content: center;
 	width: 209px;
 	height: 250px;
 }
-.ed-2 img{
-	width: 280px;
-	height: 340px;
-	box-shadow:  0 10px 15px #0000004d;
+.ed-2 img {
+    width: 280px;
+    height: 340px;
+    box-shadow: 0 10px 15px #0000004d;
+    object-fit: cover;
+    object-position: center;
 }
 
 .ed-3 img{
 	width: 250px;
-	height: 365px;
+	height: 300px;
+    object-fit: cover;
+    object-position: center;
 }
 
 
