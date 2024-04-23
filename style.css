@@ -1331,7 +1331,38 @@ display: block;
 
 
 }
+@media only screen and (max-width: 1280px) {
+    .product-info {
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column-reverse;
+        gap: 10px;
+        text-align: center;
+    }
 
+    .product-info .product-flex{
+        width: 100%;
+    }
+
+    .testimonials::after, .testimonials::before{
+        width: 180px;
+    }
+    .ft-butterfly{
+        right: 200px;
+    }
+    .ft-ball{
+        left: 200px;
+    }
+    .category::after{
+        width: 180px;
+        height: 180px;
+    }
+
+
+
+}
 
 @media only screen and (min-width: 0) and (max-width: 1023px) {
     /* body, html{
