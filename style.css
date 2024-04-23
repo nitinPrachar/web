@@ -417,7 +417,7 @@ position: relative;
     position: absolute;
     width: 120px;
     height: 120px;
-    background: url(./kid-sun.png);
+    background: url(/kid-sun.png);
     background-repeat: no-repeat;
     background-size: contain;
     top: -28px;
