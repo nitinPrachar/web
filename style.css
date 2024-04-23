@@ -1808,6 +1808,10 @@ body::after {
 .ft-toy, .ft-ball, .ft-butterfly{
     display: none;
 }
+.product-image img{
+    padding: 0;
+}
+
 
 
 
