@@ -47,7 +47,7 @@ body {
 body{
     position: relative;
 }
-body::after {
+/* body::after {
     content: '';
     background: url(https://img.freepik.com/premium-vector/3d-colorful-party-confetti-isolated-background-holiday-festival-design-greeting-card-vector_550395-1593.jpg?w=1920);
     width: 100%;
@@ -60,6 +60,23 @@ body::after {
     left: 0;
     z-index: -1;
     filter: blur(70px);
+    background-repeat: repeat-y;
+} */
+
+
+body::after {
+    content: '';
+    background: url(https://img.freepik.com/premium-vector/3d-colorful-party-confetti-isolated-background-holiday-festival-design-greeting-card-vector_550395-1593.jpg?w=1920);
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(99px);
     background-repeat: repeat-y;
 }
 ol, ul {
@@ -665,10 +682,13 @@ text-transform: capitalize;
 	width: 70%;
 }
 .product-info {
-	margin: 20px auto;
+	padding: 22px 0;
+    border-radius: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+    background: #fff;
+
 }
 .row.mt-10 {
 margin-top: 40px;
@@ -1085,6 +1105,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
         object-position: center;
         margin: 0 auto;
         padding: 0 15px;
+        border-radius: 10px 10px 0 0;
 
     }
     .slick-dots{
@@ -1137,6 +1158,213 @@ display: block;
 		 transform: translate3d(0, 0, 0);
 	}
 }
+.product-slides, .collection-slides{
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px, rgba(0, 0, 0, 0.1) 0px 8px 16px -7px;
+    margin: 0 20px 30px;
+    border-radius: 20px;
+
+}
+.product-slides .product-image img{
+    padding: 0;
+}
+.ncard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 20px 14px;
+    box-shadow:rgba(50, 50, 93, 0.1) 0px 13px 27px -5px, rgba(0, 0, 0, 0.1) 0px 8px 16px -7px;
+    border-radius: 24px;
+    margin-top: 60px;
+    user-select: none;
+    transform-origin: center bottom;
+    background: #fff;
+}
+.ncard .img {
+    height: 300px;
+    margin-top: -60px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+.card-wrapper {
+    position: relative;
+    margin: 0 20px;
+    height: 480px;
+
+}
+.ncard .img .add-fav {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #da365f;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.ncard .img .add-fav svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+.ncard .img .add-fav svg path {
+    fill: white;
+    stroke: transparent;
+}
+.ncard .img img {
+    width: 80%;
+    margin: 5% auto;
+    display: block;
+}
+.ncard .description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 20px 5px;
+}
+.ncard .description .title-rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.ncard .description .title-rating h3 {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+.ncard .description .title-rating .star {
+    color: #ccc;
+    font-size: 14px;
+}
+.ncard .brand {
+    font-family: "Poppins", sans-serif;
+    color: #ccc;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.ncard .price {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+.ncard .cta {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.ncard .cta button {
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    background: linear-gradient(#3b3b3b, #161415);
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.ncard .cta button svg {
+    width: 24px;
+    height: 24px;
+}
+.ncard .cta button svg path {
+    stroke: white;
+}
+.maint{
+height: 500px;
+width: 100%;
+position: relative;
+}
+.card-wrapper{
+position: relative;
+}
+
+.filters-category {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 50px 10px;
+    overflow-x: hidden;
+}
+.filters-category .categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 25px;
+    padding: 0px;
+    margin-right: 10px;
+    transition: ease-in-out all 0.3s;
+    background: transparent;
+    cursor: pointer;
+}
+.filters-category .categories.active {
+    background: linear-gradient(#3b3b3b, #161415);
+    padding: 0px 22px 0px 0px;
+}
+.filters-category .categories.active .name {
+    opacity: 1;
+    width: auto;
+    padding-left: 10px;
+}
+.filters-category .categories .image {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: ease-in-out all 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.filters-category .categories .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+.filters-category .categories .name {
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: ease-in-out all 0.3s;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (min-width: 1600px) {
@@ -1712,13 +1940,13 @@ header .icon-list{
     cursor: pointer;
 }
 
-.shoping-cart{
+.shoping-cart {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 34px;   
     background: none;
     padding: 9px;
     border-radius: 50%;
@@ -1731,7 +1959,7 @@ header .icon-list{
 }
 .cm-heading h2{
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
 }
 .product-info .product-flex h2{
     font-size: 15px;
@@ -1812,14 +2040,30 @@ body::after {
     padding: 0;
 }
 
-
-
-
-
-
-
-
-
+.ncard .img{
+    height: 200px;
+}
+.card-wrapper{
+ margin: 0 10px;
+ height: 380px;
+}
+ .collection-slides img, .product-image{
+    padding: 0;
+    margin: 0;
+}
+.filters-category .categories .name{
+    font-size: 12px;
+    line-height: 16px;  
+}
+.filters-category .categories .image img{
+    width: auto;
+}
+.product-slides, .collection-slides{
+    margin: 0 20px 30px;
+}
+.ft-logo img, .payments-ig img{
+    width: 100%;
+}
 
 
 
