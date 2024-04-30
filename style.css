@@ -47,6 +47,11 @@ body {
 body{
     position: relative;
 }
+.close path{
+fill:#c44569;
+}
+
+
 /* body::after {
     content: '';
     background: url(https://img.freepik.com/premium-vector/3d-colorful-party-confetti-isolated-background-holiday-festival-design-greeting-card-vector_550395-1593.jpg?w=1920);
@@ -1628,8 +1633,57 @@ position: relative;
         width: 100%;
         overflow-x: hidden;
     } */
+   
+     
     .show, .close{
         display: none;
+    }
+    .back-to-links{
+        position: absolute;
+        left: 10px;
+        width: 12px;
+        top: 20px;
+       
+    }
+    .mb-next-slide{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        cursor: pointer;
+    }
+    .mb-next-slide svg Path, .back-to-links svg path{
+        fill: #666;
+    }
+    .h-megamenu .d-links ul li {
+        margin-bottom: 15px;
+    }
+    .col .d-links{
+        margin-bottom: 25px;
+    }
+    .h-megamenu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: auto;
+        right: -100%;
+        bottom: 0;
+        overflow-y: auto;
+        z-index: 999;
+        background: #fff;
+        display: block;
+        padding-bottom: 120px;
+        top: 70px;
+        transition: 0.50s all ease-in-out;
+    }
+    .d-img .cm-head-block{
+        width: 120px;
+        height: 120px;
+    }
+    .h-megamenu .d-links h3{
+        font-weight: 700;
     }
     .logo{
         width: 300px;
@@ -1678,6 +1732,8 @@ footer::before, footer .newsletter, .ft-info, .testimonials-slides , .testimonia
 
 .ft-links li a{
     font-size: 12px;
+    border-bottom: 1px solid #222;
+    line-height: 15px;
 }
 .ft-links ul {
     gap: 10px;
@@ -1686,7 +1742,7 @@ footer::before, footer .newsletter, .ft-info, .testimonials-slides , .testimonia
     flex-basis: fit-content;
 }
 .ft-info{
-padding-top: 10px;
+padding-top: 50px;
 }
 .cm-heading h2 {
     font-size: 28px;
@@ -1753,7 +1809,7 @@ padding: 0 10px;
 
     position: absolute;
     top: -15px;
-    left: 65px;
+    left: 45px;
     padding: 5px;
     right: auto;
 }
@@ -1810,29 +1866,33 @@ header .nav-links {
     width: 100%;
     height: 100vh;
     top: 0;
-    left: 0;
+    left: -100%;
     right: 0;
     bottom: 0;
     background: #fff;
     position: fixed;
     padding: 100px 0;
+    transition: 0.20s all ease-in-out;
+    z-index: 99;
 }
 .nav-link-flex li {
 margin-bottom: 40px;
 display: block;
+cursor: pointer;
 }
 .nav-link-flex li a{
-    color: #333;
+    color: #333;    
     font-weight: 500;
 }
 .nav-link-flex li {
-    margin-bottom: 15px;
     display: block;
     border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
+    padding-bottom: 12px;
+    padding-left: 5px;
+    width: 90%;
+    margin: 15px auto;
 }
-
-.mob{
+/* .mob{
     display: block;
     width: 100%;
     height: 100vh;
@@ -1840,8 +1900,12 @@ display: block;
     top: 0;
     bottom: 0;
     z-index: 99;
-    display: none;
+    display: block;
 
+
+} */
+.mob{
+    display: block;
 }
 .edu-pr-bx .edu-img img{
 width: 100%;
@@ -1893,9 +1957,10 @@ width: 100%;
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 50%;
+    top: 30px;
     transform: translateY(-50%);
-    left: 10px;
+    right: 20px;
+    cursor: pointer;
 }
 
 .open svg path{
@@ -1906,6 +1971,13 @@ width: 40px;
 height: 40px;
 background: none;
 padding: 10px;
+position: absolute;
+top: 50%;
+left: 10px;
+}
+.close{
+width: 25px;
+height: 25px;
 }
 .banner-fill-mb{
     display: block;
@@ -1919,7 +1991,7 @@ padding: 10px;
 }
 .enquiry a {
     padding: 15px 20px;
-    font-size: 15px;
+    font-size: 13px;
 }
 .mb-icons {
     display: block;
@@ -2006,6 +2078,7 @@ header .icon-list{
     margin: 10px auto;
     display: flex;
     gap: 5px;
+    padding: 5px 0;
 }
 .cm-heading{
     margin-bottom: 30px;
@@ -2057,9 +2130,9 @@ header{
         background: #fbf5f5;
 }
 
-body::after {
+/* body::after {
     display: none;
-}
+} */
 .testimonials::before, .testimonials::after, .category::before, .category::after, .collections::before, .collections::after{
     display: none;
 }
@@ -2090,17 +2163,46 @@ body::after {
     width: auto;
 }
 .product-slides, .collection-slides{
-    margin: 0 20px 30px;
+    margin: 0 15px 30px;
 }
 .ft-logo img, .payments-ig img{
     width: 100%;
 }
+.essentials-product-info h2{
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+.essentials-product-info p{
+    font-size: 14px;
+}
+.copyright-flw{
+    margin-top: 10px;
+}
+.copyright-flw p{
+    font-size: 13px;
+}
+.ft-logo{
+width: 300px;
+margin: 0 auto;
+}
+.newsletter h2 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 9;
+    line-height: 18px;
+}
+.newsletter{
+    padding: 0 20px;
+}
+footer .container {
+padding: 0;
+overflow-x: hidden;
+}
 
-
-
-
-
-
-
+.newsletter span{
+    right: 55px;
+}
 }
 
