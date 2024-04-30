@@ -14,9 +14,24 @@
          />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://kicksandcrawl.com/cdn/shop/files/K_C__Version_1_c2c-01_3a10465b-910f-4a21-8526-82391d385961_96x.jpg?v=1702551672" type="image/png">
       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="style.css">
       <title>Kicks and Crawl</title>
+         <!-- new ga4 google analytics start-->
+         
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K9PJ2C4HJQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K9PJ2C4HJQ');
+</script>
+       
+ <!-- new ga4 google analytics end-->
+
    </head>
    <body>
       <header>
@@ -39,13 +54,14 @@
             </div>
 
                   </div>
-             
+                  
                </div>
                <div class="col-lg-6">
                   <div class="nav-links">
                      <ul class="nav-link-flex">
                         <li class="pos-rel">
-                           <a href="" class="h-label"> 
+                         
+                           <a href="javascript:void(0)" class="h-label"> 
                            <span>New</span> Shop </a>
                            <div class="toy">
                               <img src="https://wpbingosite.com/wordpress/buny/wp-content/uploads/2020/06/teddy-2.png" alt="">
@@ -269,12 +285,16 @@
       </header>
 
       <div class="mob">
-         <div class="close">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-         </div>
+        
                <ul class="nav-link-flex">
+                  <div class="close">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150."/></svg>
+                  </div>
                   <li class="pos-rel">
-                     <a href="" class="h-label"> 
+                     <span class="mb-next-slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+                     </span>
+                     <a href="javascript:void(0);" class="h-label"> 
                      <span>New</span> Shop </a>
                      <div class="toy">
                         <img src="https://wpbingosite.com/wordpress/buny/wp-content/uploads/2020/06/teddy-2.png" alt="">
@@ -295,6 +315,9 @@
                </ul>
             </div>
             <div class="h-megamenu animate__animated animate__fadeInUp">
+               <span class="back-to-links">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+               </span>
                <div class="row">
                   <div class="col">
                      <div class="d-links">
@@ -1735,5 +1758,31 @@
 });
          
       </script>
+
+      <script>
+         $(document).ready(function(){
+            $('.open').click(function(){
+               $('.nav-link-flex').css("left","0%");
+            });
+            $('.close').click(function(){
+               $('.nav-link-flex').css("left","-100%");
+               $('.h-megamenu').css("right","-100%")
+            });
+            $('.h-label').click(function(){
+               $('.h-megamenu').css("right","0%");
+            });
+            $('.back-to-links').click(function(){
+               $('.h-megamenu').css("right","-100%");
+            });
+            if(window.outerWidth < 500){
+              $('.h-megamenu').removeClass('animate__animated animate__fadeInUp')
+            }
+         })
+      </script>
+    
    </body>
 </html>
+
+
+
+
