@@ -464,7 +464,7 @@ position: relative;
 .testimonials::before {
     content: '';
     position: absolute;
-    width: 243px;
+    width: 180px;
     height: 100%;
     background: url(yellow-ring.png);
     background-repeat: no-repeat;
@@ -478,7 +478,7 @@ position: relative;
 .testimonials::after{
     content: '';
     position: absolute;
-    width: 243px;
+    width: 180px;
     height: 100%;
     background: url(purple-ring.png);
     background-repeat: no-repeat;
@@ -1454,22 +1454,12 @@ position: relative;
     letter-spacing: 1px;
     line-height: 22px;
 }
+.ncard .description .title-rating{
+    min-height: 40px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* -------------------------------------------------------------------------------- */
 
 
 @media only screen and (min-width: 1600px) {
@@ -1480,35 +1470,19 @@ position: relative;
     width: 12px;
     height: 12px;
 }
-}
-
-@media only screen and (min-width: 1501px) and (max-width:1599px){
-    .ncard .description{
-        height: 92px;
-    }
-
-
-
 
 }
-@media only screen and (min-width:1280px) and (max-width: 1500px) {
-    .ncard .description .title-rating h3{
-        font-size: 13px;
-        line-height: 20px;
-    }
-    .ncard .description{
-        height: 85px;
-    }
 
 
 
-}
 
 @media only screen and (min-width: 1280px) and (max-width: 1600px) {
     .icon-list{
         gap: 16px;
     }
-    
+    .product-reviews svg{
+     width: 9px;
+    }
 
 
     .main-products-slider img {
@@ -1547,7 +1521,7 @@ position: relative;
         object-fit: cover;
     }
     .collection-slides img{
-        width: 300px;
+        width: 100%;
         height: 270px;
         object-fit: cover;
         object-position: center;
@@ -1555,9 +1529,9 @@ position: relative;
     .collection-slides::before{
         content: '';
         background: linear-gradient(0deg, #333 0%, transparent 50%);
-        width: 300px;
+        width: 100%;
         height: 270px;
-        opacity: 1;
+        opacity: 0.5;
         position: absolute;
         top: 0;
         left: 0;
@@ -1617,7 +1591,33 @@ position: relative;
 
 
 }
+@media only screen and (min-width: 1501px) and (max-width:1599px){
 
+   
+
+
+
+}
+
+
+@media only screen and (min-width: 1441px) and (max-width: 1600px) {
+    .ncard .img{
+        height: 220px;
+    }
+    .card-wrapper{
+        height: 400px;
+    }
+
+    .ncard .description{
+        height: 92px;
+    }
+    .product-reviews svg{
+        width: 8px;
+    }
+    .product-info .product-flex h2, .product-info .product-flex h3{
+        font-size: 15px;
+    }
+}
 
 @media only screen and (min-width: 1341px) and (max-width: 1600px) {
     .h-megamenu {
@@ -1645,56 +1645,52 @@ position: relative;
         transform: rotate(5deg);
         display: none;
     }
+
+
+    .ncard .img{
+        height: 200px;
+    }
+    .card-wrapper{
+        height: 380px;
+    }
 }
 
-@media only screen  and (min-width: 1140px) and (max-width: 1340px) {
-    .logo{
-    width: 80%;
+
+
+
+
+@media only screen and (max-width: 1300px) {
+    .ncard .img{
+        height: 170px;
     }
-    .enquiry a{
-        padding: 14px;
+    .card-wrapper{
+        height: 350px;
     }
-    .edu-info h2{
+}
+
+
+
+
+
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+    .product-info .product-flex h2, .product-info .product-flex h3{
         font-size: 14px;
     }
-    .edu-info h3{
-        font-size: 15px;
+    .product-info{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+        align-items: start;
+        padding-left: 18px;
     }
-    .copyright-fl{
-        justify-content: space-around;
+    .product-info .product-flex{
+        flex-direction: row;
     }
-    .edu-pr-bx .edu-img img {
-        width: 220px;
-    }
-
-    .collection-slides img{
-        width: 90%;
-    }
-    .h-megamenu{
-        width: 980px;
-        left: -200px;
-    }
-    .d-img .cm-head-block{
-        width: 140px;
-        height: 140px;
-    }
-    .h-megamenu .d-links ul li{
-        margin-bottom: 15px;
-    }
-    .toy {
-        width: 246px;
-        height: 100%;
-        right: -992px;
-        position: absolute;
-        left: auto;
-        z-index: -1;
-        top: 296px;
-        transform: rotate(5deg);
-        display: none;
-    }
-
+  
 
 }
+
+
 @media only screen and (max-width: 1280px) {
     .product-info {
         margin: 20px auto;
@@ -1728,34 +1724,54 @@ position: relative;
 
 }
 
-@media only screen and (min-width: 1441px) and (max-width: 1600px) {
-    .ncard .img{
-        height: 220px;
+
+@media only screen  and (min-width: 1024px) and (max-width: 1280px) {
+    .logo{
+    width: 80%;
     }
-    .card-wrapper{
-        height: 400px;
+    .enquiry a{
+        padding: 14px;
     }
-}
+    .edu-info h2{
+        font-size: 14px;
+    }
+    .edu-info h3{
+        font-size: 15px;
+    }
+    .copyright-fl{
+        justify-content: space-around;
+    }
+    .edu-pr-bx .edu-img img {
+        width: 220px;
+    }
+
+    .collection-slides img{
+        width: 100%;
+    }
+    .h-megamenu{
+        width: 980px;
+        left: -200px;
+    }
+    .d-img .cm-head-block{
+        width: 140px;
+        height: 140px;
+    }
+    .h-megamenu .d-links ul li{
+        margin-bottom: 15px;
+    }
+    .toy {
+        width: 246px;
+        height: 100%;
+        right: -992px;
+        position: absolute;
+        left: auto;
+        z-index: -1;
+        top: 296px;
+        transform: rotate(5deg);
+        display: none;
+    }
 
 
-
-@media only screen and (min-width: 1331px) and (max-width: 1400px) {
-    .ncard .img{
-        height: 200px;
-    }
-    .card-wrapper{
-        height: 380px;
-    }
-}
-
-
-@media only screen and (max-width: 1330px) {
-    .ncard .img{
-        height: 170px;
-    }
-    .card-wrapper{
-        height: 350px;
-    }
 }
 
 
