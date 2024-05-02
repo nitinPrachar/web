@@ -356,6 +356,15 @@ width: 40px;
     margin: 30px auto 0;
     display: inline-block;
 }
+.enquiry span {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.enquiry span svg path{
+fill: #fff;
+}
 
 /* header end */
 
@@ -672,6 +681,7 @@ position: relative;
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 20px;
 }
 .collection-title{
     position: absolute;
@@ -741,7 +751,7 @@ text-transform: capitalize;
 	width: 70%;
 }
 .product-info {
-	padding: 22px 0;
+	padding: 22px 10px;
     border-radius: 20px;
 	display: flex;
 	align-items: center;
@@ -2327,3 +2337,20 @@ overflow-x: hidden;
 }
 }
 
+@media only screen and (min-width: 576px) {
+    .modal-dialog{
+
+        min-width: 50%;
+    }
+
+    .modal-body button.btn-close {
+        position: absolute;
+        right: 12px;
+        top: 13px;
+    
+    }
+
+    .modal-body {
+    padding: 0;
+    }
+}
