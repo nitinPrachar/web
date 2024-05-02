@@ -1472,6 +1472,15 @@ position: relative;
 }
 }
 
+@media only screen and (min-width: 1501px) and (max-width:1599px){
+    .ncard .description{
+        height: 92px;
+    }
+
+
+
+
+}
 @media only screen and (min-width:1280px) and (max-width: 1500px) {
     .ncard .description .title-rating h3{
         font-size: 13px;
@@ -1484,6 +1493,7 @@ position: relative;
 
 
 }
+
 @media only screen and (min-width: 1280px) and (max-width: 1600px) {
     .icon-list{
         gap: 16px;
