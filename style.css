@@ -1484,6 +1484,40 @@ position: relative;
      width: 9px;
     }
 
+    .h-megamenu {
+        width: 1100px;
+        left: -253px;
+        margin: 0 auto;
+        right: 0;
+    }
+    .category::after{
+        width: 180px;
+    }
+    .collections::before {
+        width: 160px;
+        height: 160px;
+    }
+
+    .toy {
+        width: 181px;
+        height: 100%;
+        right: -992px;
+        position: absolute;
+        left: auto;
+        z-index: -1;
+        top: 338px;
+        transform: rotate(5deg);
+        display: none;
+    }
+
+
+    .ncard .img{
+        height: 200px;
+    }
+    .card-wrapper{
+        height: 380px;
+    }
+
 
     .main-products-slider img {
         width: 100%;
@@ -1591,13 +1625,7 @@ position: relative;
 
 
 }
-@media only screen and (min-width: 1501px) and (max-width:1599px){
 
-   
-
-
-
-}
 
 
 @media only screen and (min-width: 1441px) and (max-width: 1600px) {
@@ -1619,54 +1647,11 @@ position: relative;
     }
 }
 
-@media only screen and (min-width: 1341px) and (max-width: 1600px) {
-    .h-megamenu {
-        width: 1100px;
-        left: -253px;
-        margin: 0 auto;
-        right: 0;
-    }
-    .category::after{
-        width: 180px;
-    }
-    .collections::before {
-        width: 160px;
-        height: 160px;
-    }
-
-    .toy {
-        width: 181px;
-        height: 100%;
-        right: -992px;
-        position: absolute;
-        left: auto;
-        z-index: -1;
-        top: 338px;
-        transform: rotate(5deg);
-        display: none;
-    }
-
-
-    .ncard .img{
-        height: 200px;
-    }
-    .card-wrapper{
-        height: 380px;
-    }
-}
 
 
 
 
 
-@media only screen and (max-width: 1300px) {
-    .ncard .img{
-        height: 170px;
-    }
-    .card-wrapper{
-        height: 350px;
-    }
-}
 
 
 
@@ -1674,7 +1659,7 @@ position: relative;
 
 @media only screen and (min-width: 1280px) and (max-width: 1440px) {
     .product-info .product-flex h2, .product-info .product-flex h3{
-        font-size: 14px;
+        font-size: 16px;
     }
     .product-info{
         display: flex;
@@ -1685,13 +1670,21 @@ position: relative;
     }
     .product-info .product-flex{
         flex-direction: row;
+        width: 100%;
+    }
+    .ncard .description .title-rating h3{
+      font-size: 15px;
+      line-height: 20px;
+    }
+    .ncard .price{
+        font-size: 15px;
     }
   
 
 }
 
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1279px) {
     .product-info {
         margin: 20px auto;
         display: flex;
@@ -1722,6 +1715,12 @@ position: relative;
 
 
 
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1340px){
+    .icon-list{
+        gap: 15px;
+    }
 }
 
 
